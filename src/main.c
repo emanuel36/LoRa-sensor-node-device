@@ -3,10 +3,11 @@
 #include "../inc/MCC Drivers/mcc.h"
 #include "../inc/MCC Drivers/eusart.h"
 #include "../inc/MCC Drivers/adc.h"
+#include "../inc/Peripheral Drivers/sht30.h"
 
 char msg[30];
 uint16_t adcResult;
-float batteryVoltage;
+float batteryVoltage, airTemperature, airHumidity;
 
 void ledBlink(){
     TRISAbits.TRISA5 = 0;
@@ -23,9 +24,8 @@ void main(void){
            
     while (1){
         ledBlink();
-        adcResult = ADC_GetSingleConversion(RC5_channel);
-        batteryVoltage = (((2.048 * adcResult) / 4096) * 2);
-        sprintf(msg, "Voltage: %.3f V\n", batteryVoltage);
+        SHT30Read(&airTemperature, &airHumidity);
+        sprintf(msg, "Temp: %.3f | Humi: %.3f\n", airTemperature, airHumidity);
         EUSART_SendString(msg);
         __delay_ms(500);
     }

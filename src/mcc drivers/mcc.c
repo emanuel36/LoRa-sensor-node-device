@@ -1,10 +1,12 @@
 #include "../../inc/MCC Drivers/mcc.h"
 #include "../../inc/MCC Drivers/adc.h"
+#include "../../inc/MCC Drivers/i2c.h"
 
 void MCU_Initialize(){
     OSCILLATOR_Initialize();
     PIN_MANAGER_Initialize();
-    ADC_Initialize();
+    //ADC_Initialize();
+    I2C_Initialize();
 }
 
 void OSCILLATOR_Initialize(){
@@ -37,8 +39,8 @@ void PIN_MANAGER_Initialize(void)
     /**
     ANSELx registers
     */
-    ANSELC = 0x3F;
-    ANSELA = 0x37;
+    ANSELC = 0x0F;
+    ANSELA = 0x27;
 
     /**
     WPUx registers
@@ -64,5 +66,9 @@ void PIN_MANAGER_Initialize(void)
     INLVLA = 0x3F;
     INLVLC = 0x3F;
 	
+    SSP1CLKPPS = 0x15;   //RC5->MSSP1:SCL1;    
     RC3PPS = 0x0F;   //RC3->EUSART1:TX1;    
+    RC4PPS = 0x14;   //RC4->MSSP1:SDA1;    
+    RC5PPS = 0x13;   //RC5->MSSP1:SCL1;    
+    SSP1DATPPS = 0x14;   //RC4->MSSP1:SDA1;    
 }

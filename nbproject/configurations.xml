@@ -10,19 +10,10 @@
         <itemPath>inc/MCC Drivers/adc.h</itemPath>
         <itemPath>inc/MCC Drivers/i2c.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="MCC Generated Files"
-                     displayName="MCC Generated Files"
-                     projectFiles="true">
-        <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
-        <itemPath>mcc_generated_files/pin_manager.h</itemPath>
-        <itemPath>mcc_generated_files/adcc.h</itemPath>
-        <itemPath>mcc_generated_files/eusart1.h</itemPath>
-        <itemPath>mcc_generated_files/device_config.h</itemPath>
-        <itemPath>mcc_generated_files/i2c1.h</itemPath>
-        <itemPath>mcc_generated_files/mcc.h</itemPath>
-      </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>inc/Peripheral Drivers/sht30.h</itemPath>
+        <itemPath>inc/Peripheral Drivers/max44009.h</itemPath>
+        <itemPath>inc/Peripheral Drivers/battery.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -40,6 +31,8 @@
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>src/Peripheral Drivers/sht30.c</itemPath>
+        <itemPath>src/Peripheral Drivers/max44009.c</itemPath>
+        <itemPath>src/Peripheral Drivers/battery.c</itemPath>
       </logicalFolder>
       <itemPath>src/main.c</itemPath>
     </logicalFolder>
@@ -55,6 +48,8 @@
   <sourceRootList>
     <Elem>inc/Peripheral Drivers</Elem>
     <Elem>src/Peripheral Drivers</Elem>
+    <Elem>src/mcc drivers</Elem>
+    <Elem>inc/MCC Drivers</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

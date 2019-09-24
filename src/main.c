@@ -3,12 +3,13 @@
 #include "../inc/MCC Drivers/mcc.h"
 #include "../inc/MCC Drivers/eusart.h"
 #include "../inc/MCC Drivers/adc.h"
+#include "../inc/Peripheral Drivers/battery.h"
 #include "../inc/Peripheral Drivers/sht30.h"
 #include "../inc/Peripheral Drivers/max44009.h"
 
 char msg[30];
 uint16_t adcResult;
-float batteryVoltage, airTemperature, airHumidity, lightness;
+float batteryVoltage, soilTemperature, airTemperature, airHumidity, lightness;
 
 void ledBlink(){
     TRISAbits.TRISA5 = 0;
@@ -25,8 +26,8 @@ void main(void){
            
     while (1){
         ledBlink();
-        max44009Read(&lightness);
-        sprintf(msg, "max44009: %.3f\n", lightness);
+        getBatteryVoltage(&batteryVoltage);
+        sprintf(msg, "Battery: %.3f V\n", batteryVoltage);
         EUSART_SendString(msg);
         __delay_ms(500);
     }

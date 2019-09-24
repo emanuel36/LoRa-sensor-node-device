@@ -7,6 +7,7 @@
       <logicalFolder name="f1" displayName="MCC Drivers" projectFiles="true">
         <itemPath>inc/MCC Drivers/mcc.h</itemPath>
         <itemPath>inc/MCC Drivers/eusart.h</itemPath>
+        <itemPath>inc/MCC Drivers/adc.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -19,6 +20,7 @@
       <logicalFolder name="f1" displayName="MCC Drivers" projectFiles="true">
         <itemPath>src/mcc drivers/mcc.c</itemPath>
         <itemPath>src/mcc drivers/eusart.c</itemPath>
+        <itemPath>src/mcc drivers/adc.c</itemPath>
       </logicalFolder>
       <itemPath>src/main.c</itemPath>
     </logicalFolder>

@@ -1,8 +1,10 @@
 #include "../../inc/MCC Drivers/mcc.h"
+#include "../../inc/MCC Drivers/adc.h"
 
 void MCU_Initialize(){
     OSCILLATOR_Initialize();
     PIN_MANAGER_Initialize();
+    ADC_Initialize();
 }
 
 void OSCILLATOR_Initialize(){

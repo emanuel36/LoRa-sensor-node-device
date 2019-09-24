@@ -44,7 +44,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-void MCU_Initialize();
+void SYSTEM_Initialize();
 void OSCILLATOR_Initialize();
 void PIN_MANAGER_Initialize();
 

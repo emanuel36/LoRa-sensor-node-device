@@ -1,12 +1,14 @@
 #include "../../inc/MCC Drivers/mcc.h"
 #include "../../inc/MCC Drivers/adc.h"
 #include "../../inc/MCC Drivers/i2c.h"
+#include "../../inc/Peripheral Drivers/max44009.h"
 
-void MCU_Initialize(){
+void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     PIN_MANAGER_Initialize();
     //ADC_Initialize();
     I2C_Initialize();
+    max44009Setup();
 }
 
 void OSCILLATOR_Initialize(){

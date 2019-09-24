@@ -1,16 +1,22 @@
 #include <xc.h>
 #include "../inc/MCC Drivers/mcc.h"
+#include "../inc/MCC Drivers/eusart.h"
+
+void ledBlink(){
+    TRISAbits.TRISA5 = 0;
+    LATA5 = 1;
+    __delay_ms(50);
+    LATA5 = 0;
+}
 
 void main(void){
     // initialize the device
     MCU_Initialize();
     
-    TRISCbits.TRISC3 = 0;
-
+    EUSART_Initialize();
     while (1){
-        LATC3 = 0;
-        __delay_ms(500);
-        LATC3 = 1;
+        ledBlink();
+        EUSART_SendString("EUSART test\n");
         __delay_ms(500);
     }
 }

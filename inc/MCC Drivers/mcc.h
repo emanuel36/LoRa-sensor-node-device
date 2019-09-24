@@ -46,5 +46,6 @@
 
 void MCU_Initialize();
 void OSCILLATOR_Initialize();
+void PIN_MANAGER_Initialize();
 
 #endif	/* MCC_H */

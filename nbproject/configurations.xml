@@ -6,6 +6,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="MCC Drivers" projectFiles="true">
         <itemPath>inc/MCC Drivers/mcc.h</itemPath>
+        <itemPath>inc/MCC Drivers/eusart.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -17,6 +18,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="MCC Drivers" projectFiles="true">
         <itemPath>src/mcc drivers/mcc.c</itemPath>
+        <itemPath>src/mcc drivers/eusart.c</itemPath>
       </logicalFolder>
       <itemPath>src/main.c</itemPath>
     </logicalFolder>
@@ -26,6 +28,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>MyConfig.mc3</itemPath>
       <itemPath>nbproject/codeGenerator.mc3</itemPath>
+      <itemPath>nbproject/CodeGenerator.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

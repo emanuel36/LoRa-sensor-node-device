@@ -8,6 +8,9 @@
         <itemPath>inc/MCC Drivers/mcc.h</itemPath>
         <itemPath>inc/MCC Drivers/eusart.h</itemPath>
         <itemPath>inc/MCC Drivers/adc.h</itemPath>
+        <itemPath>inc/MCC Drivers/i2c.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Peripheral Drivers" projectFiles="true">
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -21,6 +24,9 @@
         <itemPath>src/mcc drivers/mcc.c</itemPath>
         <itemPath>src/mcc drivers/eusart.c</itemPath>
         <itemPath>src/mcc drivers/adc.c</itemPath>
+        <itemPath>src/mcc drivers/i2c.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Peripheral Drivers" projectFiles="true">
       </logicalFolder>
       <itemPath>src/main.c</itemPath>
     </logicalFolder>

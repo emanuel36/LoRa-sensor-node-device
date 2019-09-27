@@ -22,13 +22,10 @@ void main(void){
     // initialize the device
     SYSTEM_Initialize();
     
-    EUSART_Initialize();
+    //EUSART_Initialize();
            
     while (1){
         ledBlink();
-        getBatteryVoltage(&batteryVoltage);
-        sprintf(msg, "Battery: %.3f V\n", batteryVoltage);
-        EUSART_SendString(msg);
-        __delay_ms(500);
+        __delay_ms(200);
     }
 }

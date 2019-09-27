@@ -11,9 +11,9 @@
         <itemPath>inc/MCC Drivers/i2c.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
-        <itemPath>inc/Peripheral Drivers/sht30.h</itemPath>
-        <itemPath>inc/Peripheral Drivers/max44009.h</itemPath>
         <itemPath>inc/Peripheral Drivers/battery.h</itemPath>
+        <itemPath>inc/Peripheral Drivers/max44009.h</itemPath>
+        <itemPath>inc/Peripheral Drivers/sht30.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -30,9 +30,9 @@
         <itemPath>src/mcc drivers/i2c.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
-        <itemPath>src/Peripheral Drivers/sht30.c</itemPath>
-        <itemPath>src/Peripheral Drivers/max44009.c</itemPath>
         <itemPath>src/Peripheral Drivers/battery.c</itemPath>
+        <itemPath>src/Peripheral Drivers/max44009.c</itemPath>
+        <itemPath>src/Peripheral Drivers/sht30.c</itemPath>
       </logicalFolder>
       <itemPath>src/main.c</itemPath>
     </logicalFolder>

@@ -6,7 +6,7 @@
 void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     PIN_MANAGER_Initialize();
-    ADC_Initialize();
+    //ADC_Initialize();
     //I2C_Initialize();
     //max44009Setup();
 }

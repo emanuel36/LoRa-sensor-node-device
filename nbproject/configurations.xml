@@ -24,10 +24,10 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="MCC Drivers" projectFiles="true">
-        <itemPath>src/mcc drivers/mcc.c</itemPath>
-        <itemPath>src/mcc drivers/eusart.c</itemPath>
-        <itemPath>src/mcc drivers/adc.c</itemPath>
-        <itemPath>src/mcc drivers/i2c.c</itemPath>
+        <itemPath>src/MCC Drivers/adc.c</itemPath>
+        <itemPath>src/MCC Drivers/eusart.c</itemPath>
+        <itemPath>src/MCC Drivers/i2c.c</itemPath>
+        <itemPath>src/MCC Drivers/mcc.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>src/Peripheral Drivers/battery.c</itemPath>
@@ -50,6 +50,7 @@
     <Elem>src/Peripheral Drivers</Elem>
     <Elem>src/mcc drivers</Elem>
     <Elem>inc/MCC Drivers</Elem>
+    <Elem>src/MCC Drivers</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

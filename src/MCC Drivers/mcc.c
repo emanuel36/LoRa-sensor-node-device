@@ -17,13 +17,12 @@ void ledBlink(){
 void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     PIN_MANAGER_Initialize();
-    EUSART_Initialize();
-    //ADC_Initialize();
+    ADC_Initialize();
     //I2C_Initialize();
     //max44009Setup();
-    TMR0_Initialize();
-    INTERRUPT_GlobalInterruptEnable();
-    INTERRUPT_PeripheralInterruptEnable();
+    //TMR0_Initialize();
+    //INTERRUPT_GlobalInterruptEnable();
+    //INTERRUPT_PeripheralInterruptEnable();
 }
 
 void OSCILLATOR_Initialize(){

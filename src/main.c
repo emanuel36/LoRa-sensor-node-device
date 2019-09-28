@@ -15,7 +15,10 @@ float batteryVoltage, soilTemperature, airTemperature, airHumidity, lightness;
 void main(void){
     // initialize the device
     SYSTEM_Initialize();
+    EUSART_Initialize();
     
-    while (1);
+    while (1){
+        
+    }
     
 }

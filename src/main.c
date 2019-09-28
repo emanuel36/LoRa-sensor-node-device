@@ -1,5 +1,6 @@
 #include <xc.h>
 #include <stdio.h>
+#include <stdint.h>
 #include "../inc/MCC Drivers/mcc.h"
 #include "../inc/MCC Drivers/eusart.h"
 #include "../inc/MCC Drivers/adc.h"
@@ -19,6 +20,7 @@ void main(void){
     
     while (1){
         
+        //__delay_ms(200);
     }
     
 }

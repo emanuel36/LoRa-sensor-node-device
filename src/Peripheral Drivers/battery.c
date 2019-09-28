@@ -3,5 +3,5 @@
 void getBatteryVoltage(float *voltage){
     uint16_t adcResult;
     adcResult = ADC_GetSingleConversion(RC5_channel);
-    *voltage = (((2.048 * adcResult) / 4096) * 2);
+    *voltage = (((2.048 * (float) adcResult) / 4096.0) * 2.0);
 }

@@ -9,15 +9,15 @@
 void ledBlink(){
     TRISAbits.TRISA5 = 0;
     LATA5 = 1;
-    __delay_ms(500);
+    __delay_ms(50);
     LATA5 = 0;
-    __delay_ms(500);
+    __delay_ms(50);
 }
 
 void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     PIN_MANAGER_Initialize();
-    ADC_Initialize();
+    //ADC_Initialize();
     //I2C_Initialize();
     //max44009Setup();
     //TMR0_Initialize();

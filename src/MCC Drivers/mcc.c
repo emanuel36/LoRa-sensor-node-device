@@ -16,6 +16,7 @@ void ledBlink(){
 
 void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
+    SLEEP_Inicialize();
     PIN_MANAGER_Initialize();
     //ADC_Initialize();
     I2C_Initialize();
@@ -23,6 +24,11 @@ void SYSTEM_Initialize(){
     //TMR0_Initialize();
     //INTERRUPT_GlobalInterruptEnable();
     //INTERRUPT_PeripheralInterruptEnable();
+}
+
+void SLEEP_Inicialize(){
+    VREGCONbits.VREGPM = 1;
+    CPUDOZEbits.IDLEN = 0;
 }
 
 void OSCILLATOR_Initialize(){

@@ -46,6 +46,7 @@
 
 void SYSTEM_Initialize();
 void OSCILLATOR_Initialize();
+void SLEEP_Inicialize();
 void PIN_MANAGER_Initialize();
 void ledBlink();
 

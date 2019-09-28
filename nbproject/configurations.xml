@@ -9,6 +9,8 @@
         <itemPath>inc/MCC Drivers/eusart.h</itemPath>
         <itemPath>inc/MCC Drivers/adc.h</itemPath>
         <itemPath>inc/MCC Drivers/i2c.h</itemPath>
+        <itemPath>inc/MCC Drivers/timer.h</itemPath>
+        <itemPath>inc/MCC Drivers/interrupt.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>inc/Peripheral Drivers/battery.h</itemPath>
@@ -28,6 +30,8 @@
         <itemPath>src/MCC Drivers/eusart.c</itemPath>
         <itemPath>src/MCC Drivers/i2c.c</itemPath>
         <itemPath>src/MCC Drivers/mcc.c</itemPath>
+        <itemPath>src/MCC Drivers/timer.c</itemPath>
+        <itemPath>src/MCC Drivers/interrupt.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>src/Peripheral Drivers/battery.c</itemPath>
@@ -166,7 +170,6 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

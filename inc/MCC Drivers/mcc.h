@@ -47,5 +47,6 @@
 void SYSTEM_Initialize();
 void OSCILLATOR_Initialize();
 void PIN_MANAGER_Initialize();
+void ledBlink();
 
 #endif	/* MCC_H */

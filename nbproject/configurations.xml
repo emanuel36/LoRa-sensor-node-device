@@ -11,11 +11,13 @@
         <itemPath>inc/MCC Drivers/i2c.h</itemPath>
         <itemPath>inc/MCC Drivers/timer.h</itemPath>
         <itemPath>inc/MCC Drivers/interrupt.h</itemPath>
+        <itemPath>inc/MCC Drivers/oneWire.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>inc/Peripheral Drivers/battery.h</itemPath>
         <itemPath>inc/Peripheral Drivers/max44009.h</itemPath>
         <itemPath>inc/Peripheral Drivers/sht30.h</itemPath>
+        <itemPath>inc/Peripheral Drivers/ds18b20.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -32,11 +34,13 @@
         <itemPath>src/MCC Drivers/mcc.c</itemPath>
         <itemPath>src/MCC Drivers/timer.c</itemPath>
         <itemPath>src/MCC Drivers/interrupt.c</itemPath>
+        <itemPath>src/MCC Drivers/oneWire.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>src/Peripheral Drivers/battery.c</itemPath>
         <itemPath>src/Peripheral Drivers/max44009.c</itemPath>
         <itemPath>src/Peripheral Drivers/sht30.c</itemPath>
+        <itemPath>src/Peripheral Drivers/ds18b20.c</itemPath>
       </logicalFolder>
       <itemPath>src/main.c</itemPath>
     </logicalFolder>

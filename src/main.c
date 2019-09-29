@@ -28,13 +28,7 @@ void main(void){
     SYSTEM_Initialize();
     EUSART_Initialize();
     
-    int i = 0;
-    
-    while (1){
-        sprintf(msg, "i = %d\n", i);
-        EUSART_SendString(msg);
-        if(i == 20) setSystemStatus(WARNING);
-        i++;
+    while (1){   
         SLEEP();
     }
     

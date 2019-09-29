@@ -24,7 +24,8 @@ uint8_t EUSART_Read(){
 
 void EUSART_Write(uint8_t txData){
     while(!PIR3bits.TX1IF);
-    TX1REG = txData;    
+    TX1REG = txData;   
+    while(!TX1STAbits.TRMT);
 }
 
 void EUSART_SendString(uint8_t *string){

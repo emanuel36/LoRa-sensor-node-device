@@ -8,14 +8,6 @@
 #include "../../inc/Peripheral Drivers/max44009.h"
 #include "../../inc/Peripheral Drivers/statusLed.h"
 
-void ledBlink(){
-    TRISAbits.TRISA5 = 0;
-    LATA5 = 1;
-    __delay_ms(50);
-    LATA5 = 0;
-    __delay_ms(50);
-}
-
 void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     SLEEP_Inicialize();
@@ -25,7 +17,7 @@ void SYSTEM_Initialize(){
     //ADC_Initialize();
     //I2C_Initialize();
     //max44009Setup();
-    //TMR0_Initialize();
+    TMR0_Initialize(T5_MINUTES);
     TMR2_Initialize();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();

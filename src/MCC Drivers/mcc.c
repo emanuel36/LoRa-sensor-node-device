@@ -1,10 +1,12 @@
+#include "../../inc/main.h"
 #include "../../inc/MCC Drivers/mcc.h"
 #include "../../inc/MCC Drivers/adc.h"
 #include "../../inc/MCC Drivers/i2c.h"
 #include "../../inc/MCC Drivers/timer.h"
 #include "../../inc/MCC Drivers/interrupt.h"
-#include "../../inc/Peripheral Drivers/max44009.h"
 #include "../../inc/MCC Drivers/eusart.h"
+#include "../../inc/Peripheral Drivers/max44009.h"
+#include "../../inc/Peripheral Drivers/statusLed.h"
 
 void ledBlink(){
     TRISAbits.TRISA5 = 0;
@@ -18,12 +20,15 @@ void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     SLEEP_Inicialize();
     PIN_MANAGER_Initialize();
+    statusLed_Inicialize();
+    setSystemStatus(NORMAL);
     //ADC_Initialize();
-    I2C_Initialize();
+    //I2C_Initialize();
     //max44009Setup();
     //TMR0_Initialize();
-    //INTERRUPT_GlobalInterruptEnable();
-    //INTERRUPT_PeripheralInterruptEnable();
+    TMR2_Initialize();
+    INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 }
 
 void SLEEP_Inicialize(){

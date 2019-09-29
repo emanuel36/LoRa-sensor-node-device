@@ -1,6 +1,7 @@
 #include <xc.h>
 #include <stdio.h>
 #include <stdint.h>
+#include "../inc/main.h"
 #include "../inc/MCC Drivers/mcc.h"
 #include "../inc/MCC Drivers/eusart.h"
 #include "../inc/MCC Drivers/adc.h"
@@ -14,17 +15,27 @@ char msg[30];
 uint16_t adcResult;
 float batteryVoltage, soilTemperature, airTemperature, airHumidity, lightness;
 
+void setSystemStatus(bool state){
+    systemStatus = state;
+}
+
+bool getSystemStatus(){
+    return systemStatus;
+}
+
 void main(void){
     // initialize the device
     SYSTEM_Initialize();
     EUSART_Initialize();
     
+    int i = 0;
+    
     while (1){
-        ledBlink();
-        ds18b20Read(&soilTemperature);
-        sprintf(msg, "DS18B20: %.3f\n", soilTemperature);
+        sprintf(msg, "i = %d\n", i);
         EUSART_SendString(msg);
-        __delay_ms(250);
+        if(i == 20) setSystemStatus(WARNING);
+        i++;
+        SLEEP();
     }
     
 }

@@ -24,7 +24,13 @@ enum periods {T5_MINUTES = 0,
         T80_MINUTES} period;
 
 void TMR0_Initialize(uint8_t period);
+void TMR2_Initialize();
+void TMR2_Counter8BitSet(uint8_t timerVal);
+void TMR2_CounterReset();
+void TMR2_Start();
+void TMR2_Stop();
 void TMR0_ISR();
+void TMR2_ISR();
 
 #endif	/* TIMER_H */
 

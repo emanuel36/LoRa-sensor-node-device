@@ -15,8 +15,8 @@ void SYSTEM_Initialize(){
     statusLed_Inicialize();
     setSystemStatus(NORMAL);
     //ADC_Initialize();
-    //I2C_Initialize();
-    //max44009Setup();
+    I2C_Initialize();
+    max44009Setup();
     TMR0_Initialize(T5_MINUTES);
     TMR2_Initialize();
     INTERRUPT_GlobalInterruptEnable();

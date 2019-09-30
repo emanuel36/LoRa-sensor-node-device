@@ -6,8 +6,6 @@ void I2C_Initialize(){
     SSP1CON1bits.SSPEN = 0x1;
     SSP1CON1bits.SSPM = 0x8;
     SSP1ADD = ((_XTAL_FREQ/4000)/100) - 1;
-    SSP1IE = 1;		/* Enable SSPIF interrupt */
-    SSP1IF = 0;
 }
 
 void I2C_Ready(){
@@ -59,7 +57,7 @@ bool I2C_Start(uint8_t slave_write_address){
     while(SSP1CON2bits.SEN);	/* Wait for completion of start pulse */
     SSP1IF = 0;
     if(!SSP1STATbits.S)		/* Check whether START detected last */
-        return 1;			/* Return 1 to indicate start failed */   
+        return false;			/* Return 1 to indicate start failed */   
     return (I2C_Write(slave_write_address));	/* Write slave device address with write to communicate */
 }
 

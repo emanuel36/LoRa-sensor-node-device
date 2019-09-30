@@ -11,7 +11,7 @@
 #include "../inc/Peripheral Drivers/max44009.h"
 #include "../inc/Peripheral Drivers/ds18b20.h"
 
-char msg[30];
+char msg[50];
 uint16_t adcResult;
 float batteryVoltage, soilTemperature, airTemperature, airHumidity, lightness;
 

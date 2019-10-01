@@ -6,12 +6,10 @@
     </a>
 
   <h3 align="center">A low cost and low power LoRa device sensor-node</h3>
-
   <p align="center">
     Still in progress
     <br />
     <a href="https://github.com/emanuel36/sensor-node-LoRa/tree/master/documentation"><strong>Explore the documentation »</strong></a>
-    <br />
     <br />
     <a href="https://github.com/emanuel36/sensor-node-LoRa/issues">Report Something</a>
   </p>

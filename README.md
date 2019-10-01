@@ -2,22 +2,18 @@
 <br />
 <p align="center">
   <a href="https://github.com/emanuel36/sensor-node-LoRa">
-    <img src="documentation/system.png" alt="System Architecture">
+    <img src="documentation/system.png" alt="System Architecture" width="442" height="370">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">A low cost, low power, powerful and useful LoRa device sensor-node
 
   <p align="center">
-    A low cost, low power, powerful and useful LoRa device sensor-node.
+    Still in progress.
     <br />
-    <a href="https://github.com/emanuel36/sensor-node-LoRa/documentation"><strong>Explore the documentation »</strong></a>
+    <a href="https://github.com/emanuel36/sensor-node-LoRa/tree/master/documentation"><strong>Explore the documentation »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/emanuel36/sensor-node-LoRa/issues">Report Something</a>
   </p>
 </p>
 

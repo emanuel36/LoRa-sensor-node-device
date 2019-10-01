@@ -1,21 +1,16 @@
-[![Contributors][contributors-shield]][https://github.com/emanuel36/sensor-node-LoRa/graphs/contributors]
-[![Stargazers][stars-shield]][https://github.com/emanuel36/sensor-node-LoRa/stargazers]
-[![Issues][issues-shield]][https://github.com/emanuel36/sensor-node-LoRa/issues]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/emanuel36/]
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/emanuel36/sensor-node-LoRa">
+    <img src="documentation/system.png" alt="System Architecture">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A low cost, low power, powerful and useful LoRa device sensor-node.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/emanuel36/sensor-node-LoRa/documentation"><strong>Explore the documentation »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>

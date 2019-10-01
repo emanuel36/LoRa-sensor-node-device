@@ -5,7 +5,7 @@
     <img src="documentation/system.png" alt="System Architecture" width="442" height="370">
   </a>
 
-  <h3 align="center">A low cost, low power, powerful and useful LoRa device sensor-node
+  <h3 align="center">A low cost, low power, powerful and useful LoRa device sensor-node>
 
   <p align="center">
     Still in progress.

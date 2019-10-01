@@ -3,12 +3,12 @@
 <p align="center">
   <a href="https://github.com/emanuel36/sensor-node-LoRa">
     <img src="documentation/system.png" alt="System Architecture" width="442" height="370">
-  </a>
+    </a>
 
-  <h3 align="center">A low cost, low power, powerful and useful LoRa device sensor-node>
+  <h3 align="center">A low cost and low power LoRa device sensor-node</h3>
 
   <p align="center">
-    Still in progress.
+    Still in progress
     <br />
     <a href="https://github.com/emanuel36/sensor-node-LoRa/tree/master/documentation"><strong>Explore the documentation »</strong></a>
     <br />

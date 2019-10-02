@@ -3,15 +3,15 @@
  <p align="center">
     Still in progress
     <br />
-    <a href="https://github.com/emanuel36/sensor-node-LoRa/tree/master/documentation"><strong>Explore the documentation »</strong></a>
+    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device//tree/master/documentation"><strong>Explore the documentation »</strong></a>
     <br />
-    <a href="https://github.com/emanuel36/sensor-node-LoRa/issues">Report Something</a>
+    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device/a/issues">Report Something</a>
   </p>
 </p>
 
 <br />
 <p align="center">
-  <a href="https://github.com/emanuel36/sensor-node-LoRa">
+  <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device/">
     <img src="documentation/system.png" alt="System Architecture" width="442" height="370">
     </a>
 
@@ -71,4 +71,4 @@ This is a project of a new LoRa device sensor-node. This device is capable of co
 
 Emanuel Angelim - [Linkedin](https://www.linkedin.com/in/emanuel36/) - emanuel.tiec@gmail.com
 
-Project Link: [https://github.com/emanuel36/sensor-node-LoRa](https://github.com/emanuel36/sensor-node-LoRa)
+Project Link: [https://github.com/emanuel36/LoRaWAN-sensor-node-device](https://github.com/emanuel36/LoRaWAN-sensor-node-device)

@@ -12,15 +12,15 @@ void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     SLEEP_Inicialize();
     PIN_MANAGER_Initialize();
-    statusLed_Inicialize();
-    setSystemStatus(NORMAL);
-    //ADC_Initialize();
-    I2C_Initialize();
-    max44009Setup();
-    TMR0_Initialize(T5_MINUTES);
-    TMR2_Initialize();
-    INTERRUPT_GlobalInterruptEnable();
-    INTERRUPT_PeripheralInterruptEnable();
+//    statusLed_Inicialize();
+//    setSystemStatus(NORMAL);
+    ADC_Initialize();
+//    I2C_Initialize();
+//    max44009Setup();
+//    TMR0_Initialize(T5_MINUTES);
+//    TMR2_Initialize();
+//    INTERRUPT_GlobalInterruptEnable();
+//    INTERRUPT_PeripheralInterruptEnable();
 }
 
 void SLEEP_Inicialize(){

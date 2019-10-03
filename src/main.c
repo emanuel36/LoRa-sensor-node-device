@@ -29,7 +29,10 @@ void main(void){
     EUSART_Initialize();
     
     while (1){   
-        SLEEP();
+        getBatteryVoltage(&batteryVoltage);
+        sprintf(msg, "Voltage: %.3f\n", batteryVoltage);
+        EUSART_SendString(msg);
+        __delay_ms(200);
     }
     
 }

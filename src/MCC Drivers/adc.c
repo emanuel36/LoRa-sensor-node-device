@@ -2,7 +2,7 @@
 
 void ADC_Initialize(){
     FVRCON = 0x82;
-    // ADLTH 0; 
+// ADLTH 0; 
     ADLTHL = 0x00;
     // ADLTH 0; 
     ADLTHH = 0x00;
@@ -30,8 +30,8 @@ void ADC_Initialize(){
     ADPREL = 0x00;
     // ADPRE 0; 
     ADPREH = 0x00;
-    // ADDSEN enabled; ADGPOL digital_low; ADIPEN disabled; ADPPOL Vss; 
-    ADCON1 = 0x01;
+    // ADDSEN disabled; ADGPOL digital_low; ADIPEN disabled; ADPPOL Vss; 
+    ADCON1 = 0x00;
     // ADCRS 0; ADMD Basic_mode; ADACLR disabled; ADPSIS RES; 
     ADCON2 = 0x00;
     // ADCALC First derivative of Single measurement; ADTMD disabled; ADSOI ADGO not cleared; 
@@ -42,10 +42,10 @@ void ADC_Initialize(){
     ADREF = 0x03;
     // ADACT disabled; 
     ADACT = 0x00;
-    // ADCS FOSC/2; 
-    ADCLK = 0x00;
-    // ADGO stop; ADFM right; ADON enabled; ADCS FOSC/ADCLK; ADCONT enabled; 
-    ADCON0 = 0xC4;   
+    // ADCS FOSC/64; 
+    ADCLK = 0x1F;
+    // ADGO stop; ADFM right; ADON enabled; ADCS FOSC/ADCLK; ADCONT disabled; 
+    ADCON0 = 0x84; 
 }
 
 void ADCC_StartConversion(uint8_t channel){

@@ -1,4 +1,4 @@
-#include "../../inc/MCC Drivers/eusart.h"
+#include "eusart.h"
 
 void EUSART_Initialize(){
     // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 

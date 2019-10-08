@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "../../inc/MCC Drivers/i2c.h"
+#include "i2c.h"
 
 bool max44009Setup();
 bool max44009Read(float *lux);

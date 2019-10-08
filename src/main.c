@@ -1,16 +1,16 @@
 #include <xc.h>
 #include <stdio.h>
 #include <stdint.h>
-#include "../inc/main.h"
-#include "../inc/MCC Drivers/mcc.h"
-#include "../inc/MCC Drivers/eusart.h"
-#include "../inc/MCC Drivers/adc.h"
-#include "../inc/MCC Drivers/timer.h"
-#include "../inc/Peripheral Drivers/battery.h"
-#include "../inc/Peripheral Drivers/sht30.h"
-#include "../inc/Peripheral Drivers/max44009.h"
-#include "../inc/Peripheral Drivers/ds18b20.h"
-#include "../inc/Peripheral Drivers/soilMoistureSensor.h"
+#include "main.h"
+#include "mcc.h"
+#include "eusart.h"
+#include "adc.h"
+#include "timer.h"
+#include "battery.h"
+#include "sht30.h"
+#include "max44009.h"
+#include "ds18b20.h"
+#include "soilMoistureSensor.h"
 
 char msg[60];
 float soilMoistureLevel;

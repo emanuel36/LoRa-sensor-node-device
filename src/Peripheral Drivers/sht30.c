@@ -1,5 +1,5 @@
-#include "../../inc/Peripheral Drivers/sht30.h"
-#include "../../inc/MCC Drivers/i2c.h"
+#include "sht30.h"
+#include "i2c.h"
 
 bool SHT30Read(float *temp, float *humi){
     unsigned int dataT = 0, dataRH = 0;

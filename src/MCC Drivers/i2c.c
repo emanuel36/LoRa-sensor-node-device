@@ -1,4 +1,5 @@
-#include "../../inc/MCC Drivers/mcc.h"
+#include "i2c.h"
+#include "mcc.h"
 
 void I2C_Initialize(){
     //configurar canais como saida

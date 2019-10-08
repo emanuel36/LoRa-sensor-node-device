@@ -1,5 +1,5 @@
-#include "../../inc/Peripheral Drivers/ds18b20.h"
-#include "../../inc/MCC Drivers/oneWire.h"
+#include "ds18b20.h"
+#include "oneWire.h"
 
 void ds18b20Read(float *temp){
     OneWireReset(); // Reset Pulse 

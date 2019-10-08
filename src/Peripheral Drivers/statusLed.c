@@ -1,5 +1,5 @@
-#include "../../inc/Peripheral Drivers/statusLed.h"
-#include "../../inc/main.h"
+#include "statusLed.h"
+#include "main.h"
 
 void statusLed_Inicialize(){
     NORMAL_LED_PIN = 0;

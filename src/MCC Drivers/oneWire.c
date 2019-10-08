@@ -1,5 +1,5 @@
-#include "../../inc/MCC Drivers/oneWire.h"
-#include "../../inc/MCC Drivers/mcc.h"
+#include "oneWire.h"
+#include "mcc.h"
 
 void oneWirePinInicialize(){
     ANSA4 = 0;

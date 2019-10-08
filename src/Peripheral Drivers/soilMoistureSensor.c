@@ -1,7 +1,7 @@
 #include <xc.h>
-#include "../../inc/MCC Drivers/adc.h"
-#include "../../inc/Peripheral Drivers/soilMoistureSensor.h"
-#include "../../inc/Peripheral Drivers/battery.h"
+#include "adc.h"
+#include "soilMoistureSensor.h"
+#include "battery.h"
 
 void soilMoistureSensorPinInicialize(){
     ANSA5 = 1;

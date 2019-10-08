@@ -8,8 +8,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "../../inc/MCC Drivers/mcc.h"
-
 void I2C_Initialize();
 void I2C_Ready();
 void I2C_Ack();

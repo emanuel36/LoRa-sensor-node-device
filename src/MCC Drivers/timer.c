@@ -1,7 +1,7 @@
 #include <xc.h>
-#include "../../inc/MCC Drivers/timer.h"
-#include "../../inc/Peripheral Drivers/statusLed.h"
-#include "../../inc/MCC Drivers/eusart.h"
+#include "timer.h"
+#include "statusLed.h"
+#include "eusart.h"
 
 volatile uint16_t timer0ReloadVal16bit;
 

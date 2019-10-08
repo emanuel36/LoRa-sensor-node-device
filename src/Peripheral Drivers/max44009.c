@@ -1,4 +1,4 @@
-#include "../../inc/Peripheral Drivers/max44009.h"
+#include "max44009.h"
 
 bool max44009Setup(){
     if(!(I2C_Start(MAX44009_ADDR)))      return false;

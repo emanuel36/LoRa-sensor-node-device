@@ -1,4 +1,4 @@
-#include "../../inc/Peripheral Drivers/battery.h"
+#include "battery.h"
 #include <xc.h>
 
 void batteryPinInicialize(){

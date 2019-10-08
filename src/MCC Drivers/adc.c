@@ -1,4 +1,4 @@
-#include "../../inc/MCC Drivers/adc.h"
+#include "adc.h"
 
 void ADC_Initialize(){
     FVRCON = 0x82;

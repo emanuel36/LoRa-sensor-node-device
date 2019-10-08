@@ -3,7 +3,7 @@
 
 #include <xc.h>
 #include <stdbool.h>
-#include "../../inc/main.h"
+#include "main.h"
 
 #define NORMAL_LED      LATA5
 #define NORMAL_LED_PIN  TRISA5

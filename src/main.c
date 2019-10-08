@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "main.h"
-#include "mcc.h"
+#include "mcu.h"
 #include "eusart.h"
 #include "adc.h"
 #include "timer.h"

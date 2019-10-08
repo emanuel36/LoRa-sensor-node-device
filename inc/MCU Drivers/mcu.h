@@ -1,5 +1,5 @@
-#ifndef MCC_H
-#define	MCC_H
+#ifndef MCU_H
+#define	MCU_H
 
 // CONFIG1
 #pragma config FEXTOSC = OFF    // External Oscillator mode selection bits->Oscillator not enabled
@@ -49,4 +49,4 @@ void OSCILLATOR_Initialize();
 void SLEEP_Inicialize();
 void PIN_MANAGER_Initialize();
 
-#endif	/* MCC_H */
+#endif	/* MCU_H */

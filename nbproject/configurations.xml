@@ -4,14 +4,14 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="f1" displayName="MCC Drivers" projectFiles="true">
-        <itemPath>inc/MCC Drivers/mcc.h</itemPath>
+      <logicalFolder name="f1" displayName="MCU Drivers" projectFiles="true">
         <itemPath>inc/MCC Drivers/eusart.h</itemPath>
         <itemPath>inc/MCC Drivers/adc.h</itemPath>
         <itemPath>inc/MCC Drivers/i2c.h</itemPath>
         <itemPath>inc/MCC Drivers/timer.h</itemPath>
         <itemPath>inc/MCC Drivers/interrupt.h</itemPath>
         <itemPath>inc/MCC Drivers/oneWire.h</itemPath>
+        <itemPath>inc/MCC Drivers/mcu.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>inc/Peripheral Drivers/battery.h</itemPath>
@@ -30,14 +30,14 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="f1" displayName="MCC Drivers" projectFiles="true">
-        <itemPath>src/MCC Drivers/adc.c</itemPath>
-        <itemPath>src/MCC Drivers/eusart.c</itemPath>
-        <itemPath>src/MCC Drivers/i2c.c</itemPath>
-        <itemPath>src/MCC Drivers/mcc.c</itemPath>
-        <itemPath>src/MCC Drivers/timer.c</itemPath>
-        <itemPath>src/MCC Drivers/interrupt.c</itemPath>
-        <itemPath>src/MCC Drivers/oneWire.c</itemPath>
+      <logicalFolder name="f1" displayName="MCU Drivers" projectFiles="true">
+        <itemPath>src/MCU Drivers/adc.c</itemPath>
+        <itemPath>src/MCU Drivers/eusart.c</itemPath>
+        <itemPath>src/MCU Drivers/i2c.c</itemPath>
+        <itemPath>src/MCU Drivers/interrupt.c</itemPath>
+        <itemPath>src/MCU Drivers/mcu.c</itemPath>
+        <itemPath>src/MCU Drivers/oneWire.c</itemPath>
+        <itemPath>src/MCU Drivers/timer.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>src/Peripheral Drivers/battery.c</itemPath>
@@ -53,9 +53,6 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>MyConfig.mc3</itemPath>
-      <itemPath>nbproject/codeGenerator.mc3</itemPath>
-      <itemPath>nbproject/CodeGenerator.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -64,6 +61,7 @@
     <Elem>src/mcc drivers</Elem>
     <Elem>inc/MCC Drivers</Elem>
     <Elem>src/MCC Drivers</Elem>
+    <Elem>src/MCU Drivers</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -113,7 +111,7 @@
         <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="false"/>
         <property key="extra-include-directories"
-                  value="inc;inc/MCC Drivers;inc/Peripheral Drivers"/>
+                  value="inc;inc/Peripheral Drivers;inc/MCU Drivers"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>

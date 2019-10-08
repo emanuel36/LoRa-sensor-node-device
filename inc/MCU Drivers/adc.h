@@ -18,7 +18,7 @@
 #define RC4_channel 0x14
 #define RC5_channel 0x15
 
-#include "../../inc/MCC Drivers/adc.h"
+#include "adc.h"
 
 void ADC_Initialize();
 void ADCC_StartConversion(uint8_t channel);

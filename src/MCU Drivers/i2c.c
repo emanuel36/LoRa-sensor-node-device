@@ -1,5 +1,5 @@
 #include "i2c.h"
-#include "mcc.h"
+#include "mcu.h"
 
 void I2C_Initialize(){
     //configurar canais como saida

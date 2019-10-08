@@ -1,6 +1,10 @@
 #include "../../inc/MCC Drivers/oneWire.h"
 #include "../../inc/MCC Drivers/mcc.h"
 
+void oneWirePinInicialize(){
+    ANSA4 = 0;
+}
+
 void OneWireHigh(){
     BUSDIR = 0; // Set as output
     BUSOUT = 1; // Set high 

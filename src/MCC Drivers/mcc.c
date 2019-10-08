@@ -3,8 +3,10 @@
 #include "../../inc/MCC Drivers/adc.h"
 #include "../../inc/MCC Drivers/i2c.h"
 #include "../../inc/MCC Drivers/timer.h"
-#include "../../inc/MCC Drivers/interrupt.h"
 #include "../../inc/MCC Drivers/eusart.h"
+#include "../../inc/MCC Drivers/oneWire.h"
+#include "../../inc/MCC Drivers/interrupt.h"
+#include "../../inc/Peripheral Drivers/battery.h"
 #include "../../inc/Peripheral Drivers/max44009.h"
 #include "../../inc/Peripheral Drivers/statusLed.h"
 
@@ -13,10 +15,12 @@ void SYSTEM_Initialize(){
     SLEEP_Inicialize();
     PIN_MANAGER_Initialize();
 //    statusLed_Inicialize();
-//    setSystemStatus(NORMAL);
+    setSystemStatus(NORMAL);
     ADC_Initialize();
-//    I2C_Initialize();
-//    max44009Setup();
+    oneWirePinInicialize();
+    batteryPinInicialize();
+    I2C_Initialize();
+    max44009Setup();
 //    TMR0_Initialize(T5_MINUTES);
 //    TMR2_Initialize();
 //    INTERRUPT_GlobalInterruptEnable();
@@ -53,13 +57,13 @@ void PIN_MANAGER_Initialize(void)
     TRISx registers
     */
     TRISA = 0x3F;
-    TRISC = 0x37;
+    TRISC = 0x3B;
 
     /**
     ANSELx registers
     */
     ANSELC = 0x0F;
-    ANSELA = 0x27;
+    ANSELA = 0x37;
 
     /**
     WPUx registers
@@ -84,10 +88,17 @@ void PIN_MANAGER_Initialize(void)
     */
     INLVLA = 0x3F;
     INLVLC = 0x3F;
+
+
+
+
+
+   
+    
 	
-    SSP1CLKPPS = 0x15;   //RC5->MSSP1:SCL1;    
-    RC3PPS = 0x0F;   //RC3->EUSART1:TX1;    
-    RC4PPS = 0x14;   //RC4->MSSP1:SDA1;    
-    RC5PPS = 0x13;   //RC5->MSSP1:SCL1;    
-    SSP1DATPPS = 0x14;   //RC4->MSSP1:SDA1;    
+    SSP1CLKPPS = 0x14;   //RC4->MSSP1:SCL1;    
+    RC4PPS = 0x13;   //RC4->MSSP1:SCL1;    
+    RC2PPS = 0x0F;   //RC2->EUSART1:TX1;    
+    RC5PPS = 0x14;   //RC5->MSSP1:SDA1;    
+    SSP1DATPPS = 0x15;   //RC5->MSSP1:SDA1;    
 }

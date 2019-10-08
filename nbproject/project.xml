@@ -12,6 +12,22 @@
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>inc/Peripheral Drivers</sourceRootElem>
+                <sourceRootElem>src/Peripheral Drivers</sourceRootElem>
+                <sourceRootElem>src/mcc drivers</sourceRootElem>
+                <sourceRootElem>inc/MCC Drivers</sourceRootElem>
+                <sourceRootElem>src/MCC Drivers</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
         </data>
     </configuration>
 </project>

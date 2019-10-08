@@ -5,5 +5,6 @@
 #include <stdint.h>
 
 void getBatteryVoltage(float *voltage);
+void batteryPinInicialize();
 
 #endif	/* BATTERY_H */

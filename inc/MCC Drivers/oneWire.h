@@ -10,6 +10,7 @@
 #define BUSOUT TRISAbits.TRISA4 // Set output: high or low 
 #define BUSIN PORTAbits.RA4 // Read input 
 
+void oneWirePinInicialize();
 unsigned int OneWireReset(void); // Sends a reset pulse to the sensor 
 void OneWireWriteBit(unsigned char); // write a single bit to the OneWire
 unsigned char OneWireReadBit(void); // reads a single bit 

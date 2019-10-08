@@ -19,6 +19,7 @@
         <itemPath>inc/Peripheral Drivers/sht30.h</itemPath>
         <itemPath>inc/Peripheral Drivers/ds18b20.h</itemPath>
         <itemPath>inc/Peripheral Drivers/statusLed.h</itemPath>
+        <itemPath>inc/Peripheral Drivers/soilMoistureSensor.h</itemPath>
       </logicalFolder>
       <itemPath>inc/main.h</itemPath>
     </logicalFolder>
@@ -44,6 +45,7 @@
         <itemPath>src/Peripheral Drivers/sht30.c</itemPath>
         <itemPath>src/Peripheral Drivers/ds18b20.c</itemPath>
         <itemPath>src/Peripheral Drivers/statusLed.c</itemPath>
+        <itemPath>src/Peripheral Drivers/soilMoistureSensor.c</itemPath>
       </logicalFolder>
       <itemPath>src/main.c</itemPath>
     </logicalFolder>

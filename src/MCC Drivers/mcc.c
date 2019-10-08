@@ -9,6 +9,7 @@
 #include "../../inc/Peripheral Drivers/battery.h"
 #include "../../inc/Peripheral Drivers/max44009.h"
 #include "../../inc/Peripheral Drivers/statusLed.h"
+#include "../../inc/Peripheral Drivers/soilMoistureSensor.h"
 
 void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();

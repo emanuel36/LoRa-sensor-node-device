@@ -10,9 +10,15 @@
 #include "../inc/Peripheral Drivers/sht30.h"
 #include "../inc/Peripheral Drivers/max44009.h"
 #include "../inc/Peripheral Drivers/ds18b20.h"
+#include "../inc/Peripheral Drivers/soilMoistureSensor.h"
 
-char msg[50];
-float batteryVoltage, soilTemperature, airTemperature, airHumidity, lightness;
+char msg[60];
+float soilMoistureLevel;
+float batteryVoltage, 
+      soilTemperature, 
+      airTemperature, 
+      airHumidity, 
+      lightness;
 
 void setSystemStatus(bool state){
     systemStatus = state;
@@ -28,6 +34,7 @@ void variablesReset(){
     airTemperature = 0.0;
     airHumidity = 0.0;
     lightness = 0.0;
+    soilMoistureLevel = 0;
 }
 
 bool lightnessCheck(){
@@ -57,6 +64,7 @@ void sensorsRead(){
     SHT30Read(&airTemperature, &airHumidity);
     ds18b20Read(&soilTemperature);
     max44009Read(&lightness);
+    soilMoistureSensorRead(&soilMoistureLevel);
     if(dataCheck() == false){
         setSystemStatus(WARNING);
     }else{
@@ -65,7 +73,7 @@ void sensorsRead(){
 }
 
 void msgBuild(){
-    sprintf(msg, "Battery: %.3f V\nSHT30: %.2fC/%.2f%%\nDS18B20: %.2fC\nmax44009: %.2flm\n\n", batteryVoltage, airTemperature, airHumidity, soilTemperature, lightness);
+    sprintf(msg, "Battery: %.3f V\nSHT30: %.2fC/%.2f%%\nDS18B20: %.2fC\nmax44009: %.2flm\nCapacitive Sensor: %.2f\n\n", batteryVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
 }
 
 void bluetoothSend(){
@@ -85,6 +93,6 @@ void main(void){
     
     while (1){ 
         callBack();
-        __delay_ms(1000);
+        __delay_ms(500);
     }
 }

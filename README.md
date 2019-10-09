@@ -5,7 +5,7 @@
     <br />
     <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device//tree/master/documentation"><strong>:page_facing_up: Explore the documentation :page_facing_up:</strong></a>
     <br />
-    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device/a/issues">:warning: Report or Suggest Something :warning:</a>
+    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device/issues">:warning: Report or Suggest Something :warning:</a>
   </p>
 </p>
 

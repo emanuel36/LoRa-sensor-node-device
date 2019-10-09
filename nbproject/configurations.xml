@@ -4,14 +4,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="f1" displayName="MCU Drivers" projectFiles="true">
-        <itemPath>inc/MCC Drivers/eusart.h</itemPath>
-        <itemPath>inc/MCC Drivers/adc.h</itemPath>
-        <itemPath>inc/MCC Drivers/i2c.h</itemPath>
-        <itemPath>inc/MCC Drivers/timer.h</itemPath>
-        <itemPath>inc/MCC Drivers/interrupt.h</itemPath>
-        <itemPath>inc/MCC Drivers/oneWire.h</itemPath>
-        <itemPath>inc/MCC Drivers/mcu.h</itemPath>
+      <logicalFolder name="MCU Drivers" displayName="MCU Drivers" projectFiles="true">
+        <itemPath>inc/MCU Drivers/eusart.h</itemPath>
+        <itemPath>inc/MCU Drivers/interrupt.h</itemPath>
+        <itemPath>inc/MCU Drivers/adc.h</itemPath>
+        <itemPath>inc/MCU Drivers/oneWire.h</itemPath>
+        <itemPath>inc/MCU Drivers/timer.h</itemPath>
+        <itemPath>inc/MCU Drivers/i2c.h</itemPath>
+        <itemPath>inc/MCU Drivers/mcu.h</itemPath>
+        <itemPath>inc/MCU Drivers/spi.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>inc/Peripheral Drivers/battery.h</itemPath>
@@ -38,6 +39,7 @@
         <itemPath>src/MCU Drivers/mcu.c</itemPath>
         <itemPath>src/MCU Drivers/oneWire.c</itemPath>
         <itemPath>src/MCU Drivers/timer.c</itemPath>
+        <itemPath>src/MCU Drivers/spi.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Peripherals Drivers" projectFiles="true">
         <itemPath>src/Peripheral Drivers/battery.c</itemPath>
@@ -62,6 +64,7 @@
     <Elem>inc/MCC Drivers</Elem>
     <Elem>src/MCC Drivers</Elem>
     <Elem>src/MCU Drivers</Elem>
+    <Elem>inc/MCU Drivers</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -191,6 +194,7 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

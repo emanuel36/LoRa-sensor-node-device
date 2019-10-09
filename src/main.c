@@ -11,6 +11,7 @@
 #include "max44009.h"
 #include "ds18b20.h"
 #include "soilMoistureSensor.h"
+#include "spi.h"
 
 char msg[60];
 float soilMoistureLevel;
@@ -87,12 +88,11 @@ void callBack(){
 }
 
 void main(void){
-    // initialize the device
     SYSTEM_Initialize();
-    EUSART_Initialize();
-    
-    while (1){ 
-        callBack();
+    //EUSART_Initialize();
+    uint8_t data = 0;
+    while(1){ 
+        spi_exchangeByte(data++);
         __delay_ms(500);
     }
 }

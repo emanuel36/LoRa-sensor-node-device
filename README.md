@@ -1,18 +1,18 @@
   <h3 align="center">A low cost and low power LoRa device sensor-node</h3>
  
  <p align="center">
-    Still in progress
+    Still in progress :construction:
     <br />
-    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device//tree/master/documentation"><strong>Explore the documentation »</strong></a>
+    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device//tree/master/documentation"><strong>Explore the documentation :page_facing_up:</strong></a>
     <br />
-    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device/a/issues">Report Something</a>
+    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device/a/issues">Report or Suggest Something :warning:</a>
   </p>
 </p>
 
 <br />
 <p align="center">
   <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device/">
-    <img src="documentation/system.png" alt="System Architecture" width="442" height="370">
+    <img src="documentation/Photos/system.png" alt="System Architecture" width="442" height="370">
     </a>
 
 
@@ -39,7 +39,7 @@ This is a project of a new LoRa device sensor-node. This device is capable of co
 
 ### IDE and Compiler Version
 * [MPLAB XC8 v1.42](https://www.microchip.com/development-tools/pic-and-dspic-downloads-archive)
-* [MPLAP X IDE v4.2](https://www.microchip.com/development-tools/pic-and-dspic-downloads-archive)
+* [MPLAP X IDE v5.25](https://www.microchip.com/development-tools/pic-and-dspic-downloads-archive)
 
 
 ## Detailed Description

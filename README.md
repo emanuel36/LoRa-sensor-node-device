@@ -1,11 +1,12 @@
+  <h3 align="center">A low cost and low power LoRa device sensor-node</h3>
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Languages][languages-shield]][languages-url]
-[![Size][size-shield]][size-url]
+![language-shield]
+![Size][size-shield]
 [![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]  
-
-  <h3 align="center">A low cost and low power LoRa device sensor-node</h3>
+[![LinkedIn][linkedin-shield]][linkedin-url]
+ 
  
  <p align="center">
    :construction: Still in progress :construction:
@@ -83,13 +84,13 @@ Emanuel Angelim - [Linkedin](https://www.linkedin.com/in/emanuel36/en) - emanuel
 Project Link: [https://github.com/emanuel36/LoRaWAN-sensor-node-device](https://github.com/emanuel36/LoRaWAN-sensor-node-device)
 
 [contributors-shield]: https://img.shields.io/github/contributors/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
-[contributors-link]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/graphs/contributors
+[contributors-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/graphs/contributors
 [stars-shield]: https://img.shields.io/github/stars/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
-[stars-link]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/stargazers
+[stars-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/stargazers
 [language-shield]: https://img.shields.io/github/languages/top/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
-[language-link]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/search?l=c
+[language-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/search?l=c
 [size-shield]: https://img.shields.io/github/languages/code-size/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
 [issues-shield]: https://img.shields.io/github/issues/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
-[issues-link]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/issues
+[issues-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue?style=flat-square
-[linkedin-link]: https://www.linkedin.com/in/emanuel36/en
+[linkedin-url]: https://www.linkedin.com/in/emanuel36/en

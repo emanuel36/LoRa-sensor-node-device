@@ -20,8 +20,17 @@ static const spi2_configuration_t spi2_configuration[] = {
 
 //Setup SPI
 bool spi_open(spi2_modes spiUniqueConfiguration){
+    ANSA0 = 0;
+    ANSA1 = 0;
+    ANSA2 = 0;
+    
+    TRISA0 = 1;
+    TRISA1 = 0;
+    TRISA2 = 0;
     TRISC0 = 0;
+    
     LATC0 = 1;
+    
     if(!SSPEN2){
         //setup PPS pins
         SSP2CLKPPS = 2;

@@ -73,6 +73,8 @@ This is a project of a new LoRa device sensor-node. This device is capable of co
 
 ### Board
 
+![](https://github.com/emanuel36/LoRaWAN-sensor-node-device/tree/master/documentation/Hardware/placa.png)
+
 ## Assembled Board With Components
 
 ## Acknowledgements

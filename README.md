@@ -71,6 +71,8 @@ This is a project of a new LoRa device sensor-node. This device is capable of co
 
 ### Schematic
 
+<img src="documentation/Hardware/esquematico.png">
+
 ### Board
 
 <img src="documentation/Hardware/placa.png">

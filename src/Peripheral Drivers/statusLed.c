@@ -12,7 +12,7 @@ void swapLedState(){
     if(getSystemStatus() == NORMAL){
         WARNING_LED = 0;
         NORMAL_LED = !NORMAL_LED;
-    }else{//systemStatus == WARNING_MODE
+    }else{
         NORMAL_LED = 0;
         WARNING_LED = !WARNING_LED;
     }

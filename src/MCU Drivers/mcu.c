@@ -16,16 +16,17 @@ void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     SLEEP_Inicialize();
     PIN_MANAGER_Initialize();
-//    statusLed_Inicialize();
-//    setSystemStatus(NORMAL);
-//    ADC_Initialize();
-//    oneWirePinInicialize();
-//    batteryPinInicialize();
-//    I2C_Initialize();
-//    max44009Setup();
-    spi_open(SPI_DEFAULT);
+    statusLed_Inicialize();
+    setSystemStatus(NORMAL);
+    ADC_Initialize();
+    EUSART_Initialize();
+    oneWirePinInicialize();
+    batteryPinInicialize();
+    I2C_Initialize();
+    max44009Setup();
+    //SPI2_Initialize();
 //    TMR0_Initialize(T5_MINUTES);
-//    TMR2_Initialize();
+    TMR2_Initialize();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
 }
@@ -92,13 +93,13 @@ void PIN_MANAGER_Initialize(void)
     INLVLA = 0x3F;
     INLVLC = 0x3F;
     
-	SSP2DATPPS = 0x00;   //RA0->MSSP2:SDI2;    
-    RA1PPS = 0x16;   //RA1->MSSP2:SDO2;    
-    RA2PPS = 0x15;   //RA2->MSSP2:SCK2;    
-    SSP2CLKPPS = 0x02;   //RA2->MSSP2:SCK2; 
+//	SSP2DATPPS = 0x00;   //RA0->MSSP2:SDI2;    
+//    RA1PPS = 0x16;   //RA1->MSSP2:SDO2;    
+//    RA2PPS = 0x15;   //RA2->MSSP2:SCK2;    
+//    SSP2CLKPPS = 0x02;   //RA2->MSSP2:SCK2; 
     SSP1CLKPPS = 0x14;   //RC4->MSSP1:SCL1;    
     RC4PPS = 0x13;   //RC4->MSSP1:SCL1;    
-    RC2PPS = 0x0F;   //RC2->EUSART1:TX1;    
+    RC0PPS = 0x0F;   //RC2->EUSART1:TX1;    
     RC5PPS = 0x14;   //RC5->MSSP1:SDA1;    
     SSP1DATPPS = 0x15;   //RC5->MSSP1:SDA1;    
 }

@@ -1,34 +1,23 @@
-#ifndef SPI_H
-#define SPI_H
+#ifndef _SPI2_H
+#define _SPI2_H
 
-#include <stdio.h>
-#include <stdint.h>
 #include <stdbool.h>
-#include <stdio.h>
+#include <stddef.h>
+#include <stdint.h>
 
-#define INLINE  inline 
+#define SPI2_DUMMY_DATA 0x0
+#define SPI_RX_IN_PROGRESS 0x0
 
-typedef enum { 
-    SPI_DEFAULT
-} spi2_modes;
-
-/* arbitration interface */
-INLINE void spi_close(void);
-
-bool spi_open(spi2_modes spiUniqueConfiguration);
-/* SPI native data exchange function */
-uint8_t spi_exchangeByte(uint8_t b);
-/* SPI Block move functions }(future DMA support will be here) */
-void spi_exchangeBlock(void *block, size_t blockSize);
-void spi_writeBlock(void *block, size_t blockSize);
-void spi_readBlock(void *block, size_t blockSize);
-
-void spi_writeByte(uint8_t byte);
-uint8_t spi_readByte(void);
+void SPI2_Initialize(void);
 void chipDisable();
 void chipEnable();
+uint8_t SPI2_Exchange8bit(uint8_t data);
+uint8_t SPI2_Exchange8bitBuffer(uint8_t *dataIn, uint8_t bufLen, uint8_t *dataOut);
+bool SPI2_IsBufferFull(void);
+bool SPI2_HasWriteCollisionOccured(void);
+void SPI2_ClearWriteCollisionStatus(void);
 
-void spi_isr(void);
-void spi_setSpiISR(void(*handler)(void));
-
-#endif // SPI_H
+#endif // _SPI2_H
+/**
+ End of File
+*/

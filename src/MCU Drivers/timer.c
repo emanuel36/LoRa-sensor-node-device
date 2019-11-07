@@ -111,7 +111,7 @@ void TMR2_ISR(void){
     // clear the TMR2 interrupt flag
     PIR4bits.TMR2IF = 0;
 
-    if(LATA5 || LATA4){
+    if(WARNING_LED || NORMAL_LED){
         TMR2_Period8BitSet(0xFF);
     }else{
         TMR2_Period8BitSet(0x0F);

@@ -15,7 +15,7 @@
 
 char msg[60];
 float soilMoistureLevel;
-float batteryVoltage, 
+float supplyVoltage, 
       soilTemperature, 
       airTemperature, 
       airHumidity, 
@@ -30,7 +30,7 @@ bool getSystemStatus(){
 }
 
 void variablesReset(){
-    batteryVoltage = 0.0;
+    supplyVoltage = 0.0;
     soilTemperature = 0.0;
     airTemperature = 0.0;
     airHumidity = 0.0;
@@ -39,42 +39,50 @@ void variablesReset(){
 }
 
 bool lightnessCheck(){
-    if(lightness > 189.0 | lightness < 0.01)   return false;
+    if(lightness > 189.0 | lightness < 0.0)                         return false;
     return true;
 }
 
 bool temperatureCheck(){
-    if(airTemperature > 50.0 | airTemperature < 0.1)       
-        return false;
+    if(airTemperature > 50.0 | airTemperature < 0.1)                return false;
+    if(soilTemperature > 50.0 | soilTemperature < 0.1)              return false;
     return true;
 }
 
 bool humidityCheck(){
-    if(airHumidity > 100.0 | airHumidity < 0.1)   return false;
+    if(airHumidity > 100.0 | airHumidity < 0.1)                     return false;
     return true;
 }
 
 bool dataCheck(){
-    if(temperatureCheck() & humidityCheck() & lightnessCheck())    return true;
+    if(temperatureCheck() & humidityCheck() & lightnessCheck())     return true;
     return false;
+}
+
+bool voltageCheck(){
+    if(supplyVoltage < 2.5 || supplyVoltage > 3.5)                  return false;
+    return true;
+}
+
+bool systemCheck(){
+    if(dataCheck() && voltageCheck()){
+        setSystemStatus(NORMAL);
+    }else{
+        setSystemStatus(WARNING);
+    }
 }
 
 void sensorsRead(){
     variablesReset();
-    getBatteryVoltage(&batteryVoltage);
+    getBatteryVoltage(&supplyVoltage);
     SHT30Read(&airTemperature, &airHumidity);
-    ds18b20Read(&soilTemperature);
     max44009Read(&lightness);
-    soilMoistureSensorRead(&soilMoistureLevel);
-    if(dataCheck() == false){
-        setSystemStatus(WARNING);
-    }else{
-        setSystemStatus(NORMAL);
-    }
+    //ds18b20Read(&soilTemperature);
+    //soilMoistureSensorRead(&soilMoistureLevel);
 }
 
 void msgBuild(){
-    sprintf(msg, "Battery: %.3f V\nSHT30: %.2fC/%.2f%%\nDS18B20: %.2fC\nmax44009: %.2flm\nCapacitive Sensor: %.2f\n\n", batteryVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
+    sprintf(msg, "Battery: %.3f V\nSHT30: %.2fC/%.2f%%\nDS18B20: %.2fC\nmax44009: %.2flm\nCapacitive Sensor: %.2f\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
 }
 
 void bluetoothSend(){
@@ -83,16 +91,15 @@ void bluetoothSend(){
 
 void callBack(){
     sensorsRead();
+    systemCheck();
     msgBuild();
     bluetoothSend();
 }
 
 void main(void){
     SYSTEM_Initialize();
-    //EUSART_Initialize();
-    uint8_t data = 0;
     while(1){ 
-        spi_exchangeByte(data++);
+        callBack();
         __delay_ms(500);
     }
 }

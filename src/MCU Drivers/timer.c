@@ -1,7 +1,7 @@
 #include <xc.h>
 #include "timer.h"
 #include "statusLed.h"
-#include "eusart.h"
+#include "main.h"
 
 volatile uint16_t timer0ReloadVal16bit;
 
@@ -102,7 +102,7 @@ void TMR0_ISR(){
     TMR0H = timer0ReloadVal16bit >> 8;
     TMR0L = (uint8_t) timer0ReloadVal16bit;
     
-    EUSART_SendString("Interrupt\n");
+    callBack();
     
     TMR0_StartTimer();
 }

@@ -1,6 +1,21 @@
 #include "sht30.h"
 #include "i2c.h"
 
+void SHT30Setup(){
+    I2C_Start(SHT30_ADRESS);
+    I2C_Write(COMMAND_BYTE_1);
+    I2C_Write(COMMAND_BYTE_2);
+    I2C_Stop();
+    I2C_Start(SHT30_ADRESS + 1);
+    I2C_Read(ACK);
+    I2C_Read(ACK);
+    I2C_Read(ACK);
+    I2C_Read(ACK);
+    I2C_Read(ACK);
+    I2C_Read(NACK);
+    I2C_Stop();
+}
+
 bool SHT30Read(float *temp, float *humi){
     unsigned int dataT = 0, dataRH = 0;
     char checksumTemp = 0, checksumHumi = 0;
@@ -13,7 +28,7 @@ bool SHT30Read(float *temp, float *humi){
     if(!(I2C_Start(SHT30_ADRESS + 1)))  return false;
     dataT = I2C_Read(ACK) << 8;
     dataT |= I2C_Read(ACK);
-    checksumTemp = I2C_Read(0);
+    checksumTemp = I2C_Read(ACK);
     dataRH = I2C_Read(ACK) << 8;
     dataRH |= I2C_Read(ACK);
     checksumHumi = I2C_Read(NACK);

@@ -1,8 +1,9 @@
 #include "adc.h"
+#include <stdbool.h>
 
 void ADC_Initialize(){
     FVRCON = 0x82;
-// ADLTH 0; 
+    // ADLTH 0; 
     ADLTHL = 0x00;
     // ADLTH 0; 
     ADLTHH = 0x00;
@@ -88,4 +89,16 @@ uint16_t ADC_GetSingleConversion(uint8_t channel){
     
     // Conversion finished, return the result
     return (ADRESH << 8) + ADRESL;
+}
+
+void ADC_use_fvr(bool flag){
+    if(flag){
+        ADCON0bits.ON = 0;
+        ADREF = 0x03;
+        ADCON0bits.ON = 1;
+    }else{
+        ADCON0bits.ON = 0;
+        ADREF = 0x00;
+        ADCON0bits.ON = 1;
+    }
 }

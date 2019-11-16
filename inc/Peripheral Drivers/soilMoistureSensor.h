@@ -2,7 +2,7 @@
 #define	SOILMOISTURESENSOR_H
 
 void soilMoistureSensorPinInicialize();
-void soilMoistureSensorRead(float *moisture);
+void soilMoistureSensorRead(int *moisture);
 
 #endif	/* SOILMOISTURESENSOR_H */
 

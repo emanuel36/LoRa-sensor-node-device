@@ -25,5 +25,6 @@ void ADCC_StartConversion(uint8_t channel);
 bool ADCC_IsConversionDone();
 uint16_t ADCC_GetConversionResult();
 uint16_t ADC_GetSingleConversion(uint8_t channel);
+void ADC_use_fvr(bool flag);
 
 #endif	/* ADC_H */

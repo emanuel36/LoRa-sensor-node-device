@@ -12,16 +12,18 @@ bool max44009Read(float *lux){
     uint8_t dataL;
     
     if(!(I2C_Start(MAX44009_ADDR)))      return false;
-    if(!(I2C_Write(REQUEST_COMMAND)))    return false;
-    if(!(I2C_Stop()))                    return false;
+    I2C_Write(REQUEST_COMMAND);
+    I2C_Stop();
     
-    if(!(I2C_Start(MAX44009_ADDR + 1)))  return false;
+    I2C_Start(MAX44009_ADDR + 1);
     dataH = I2C_Read(ACK);
     dataL = I2C_Read(NACK);
-    if(!(I2C_Stop()))                    return false;
+    I2C_Stop();
     
     uint8_t exponent = (dataH & 0xF0) >> 4;
     uint8_t mantissa = ((dataH & 0x0F) << 4) | (dataL & 0x0F);
     
     *lux = (float) (((0x00000001 << exponent) * (float) mantissa) * 0.045);
+    
+    return true;
 }

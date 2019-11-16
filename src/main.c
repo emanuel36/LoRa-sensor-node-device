@@ -1,20 +1,18 @@
 #include <xc.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdint.h>
 #include "main.h"
 #include "mcu.h"
 #include "eusart.h"
-#include "adc.h"
-#include "timer.h"
-#include "battery.h"
+#include "supplyVoltage.h"
 #include "sht30.h"
 #include "max44009.h"
 #include "ds18b20.h"
 #include "soilMoistureSensor.h"
-#include "spi.h"
 
-char msg[60];
-float soilMoistureLevel;
+char msg[60]; 
+int soilMoistureLevel;
 float supplyVoltage, 
       soilTemperature, 
       airTemperature, 
@@ -34,28 +32,28 @@ void variablesReset(){
     soilTemperature = 0.0;
     airTemperature = 0.0;
     airHumidity = 0.0;
-    lightness = 0.0;
+    lightness = -1.0;
     soilMoistureLevel = 0;
 }
 
 bool lightnessCheck(){
-    if(lightness > 189.0 | lightness < 0.0)                         return false;
+    if(lightness > 189000.0 || lightness < 0.0)                         return false;
     return true;
 }
 
 bool temperatureCheck(){
-    if(airTemperature > 50.0 | airTemperature < 0.1)                return false;
-    if(soilTemperature > 50.0 | soilTemperature < 0.1)              return false;
+    if(airTemperature > 80.0 || airTemperature < 0.1)                return false;
+    if(soilTemperature > 80.0 || soilTemperature < 0.1)              return false;
     return true;
 }
 
 bool humidityCheck(){
-    if(airHumidity > 100.0 | airHumidity < 0.1)                     return false;
+    if(airHumidity > 100.0 || airHumidity < 0.1)                     return false;
     return true;
 }
 
 bool dataCheck(){
-    if(temperatureCheck() & humidityCheck() & lightnessCheck())     return true;
+    if(temperatureCheck() && humidityCheck() && lightnessCheck())     return true;
     return false;
 }
 
@@ -74,15 +72,20 @@ bool systemCheck(){
 
 void sensorsRead(){
     variablesReset();
-    getBatteryVoltage(&supplyVoltage);
+    getSupplyVoltage(&supplyVoltage);
     SHT30Read(&airTemperature, &airHumidity);
     max44009Read(&lightness);
-    //ds18b20Read(&soilTemperature);
-    //soilMoistureSensorRead(&soilMoistureLevel);
+    ds18b20Read(&soilTemperature);
+    soilMoistureSensorRead(&soilMoistureLevel);
 }
 
 void msgBuild(){
-    sprintf(msg, "Battery: %.3f V\nSHT30: %.2fC/%.2f%%\nDS18B20: %.2fC\nmax44009: %.2flm\nCapacitive Sensor: %.2f\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
+    msg[0] = '\0';
+    if(getSystemStatus() == NORMAL){
+       sprintf(msg, "Status: Normal\n%.3f V\n%.2fC/%.2f%%\n%.2fC\n%.2flm\n%dL\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
+    }else{
+       sprintf(msg, "Status: Erro\n%.3f V\n%.2fC/%.2f%%\n%.2fC\n%.2flm\n%dL\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel); 
+    }
 }
 
 void bluetoothSend(){
@@ -99,7 +102,6 @@ void callBack(){
 void main(void){
     SYSTEM_Initialize();
     while(1){ 
-        callBack();
-        __delay_ms(500);
+        SLEEP();
     }
 }

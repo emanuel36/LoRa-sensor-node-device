@@ -29,7 +29,7 @@ void I2C_Nack(){
 bool I2C_Write(uint8_t data){
     SSP1BUF = data;	/* Write data to SSPBUF*/
     I2C_Ready();
-    if(ACKSTAT1)	/* Check for acknowledge bit*/
+        if(ACKSTAT1)	/* Check for acknowledge bit*/
         return false;   /* Return 1 to indicate write failed */
     else
         return true;

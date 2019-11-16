@@ -1,8 +1,10 @@
+#include <pic16f18426.h>
+
 #include "oneWire.h"
 #include "mcu.h"
 
 void oneWirePinInicialize(){
-    ANSA4 = 0;
+    ANSC5 = 0;
 }
 
 void OneWireHigh(){

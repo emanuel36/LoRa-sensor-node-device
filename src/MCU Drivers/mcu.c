@@ -1,3 +1,5 @@
+#include <pic16f18426.h>
+
 #include "main.h"
 #include "mcu.h"
 #include "adc.h"
@@ -6,8 +8,10 @@
 #include "eusart.h"
 #include "oneWire.h"
 #include "interrupt.h"
-#include "battery.h"
+#include "supplyVoltage.h"
 #include "max44009.h"
+#include "sht30.h"
+#include "ds18b20.h"
 #include "statusLed.h"
 #include "soilMoistureSensor.h"
 #include "spi.h"
@@ -21,11 +25,13 @@ void SYSTEM_Initialize(){
     ADC_Initialize();
     EUSART_Initialize();
     oneWirePinInicialize();
-    batteryPinInicialize();
+    supplyPinInicialize();
     I2C_Initialize();
     max44009Setup();
-    //SPI2_Initialize();
-//    TMR0_Initialize(T5_MINUTES);
+    SHT30Setup();
+    ds18b20Setup();
+//    SPI2_Initialize();
+    TMR0_Initialize(T5_MINUTES);
     TMR2_Initialize();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
@@ -97,9 +103,12 @@ void PIN_MANAGER_Initialize(void)
 //    RA1PPS = 0x16;   //RA1->MSSP2:SDO2;    
 //    RA2PPS = 0x15;   //RA2->MSSP2:SCK2;    
 //    SSP2CLKPPS = 0x02;   //RA2->MSSP2:SCK2; 
-    SSP1CLKPPS = 0x14;   //RC4->MSSP1:SCL1;    
-    RC4PPS = 0x13;   //RC4->MSSP1:SCL1;    
-    RC0PPS = 0x0F;   //RC2->EUSART1:TX1;    
-    RC5PPS = 0x14;   //RC5->MSSP1:SDA1;    
-    SSP1DATPPS = 0x15;   //RC5->MSSP1:SDA1;    
+    
+    ANSA5 = 0;
+    ANSA4 = 0;
+    RC0PPS = 0x0F;   //RC0->EUSART1:TX1;   
+    SSP1CLKPPS = 0x05;   //RA5->MSSP1:SCL1; 
+    RA5PPS = 0x13;   //RA5->MSSP1:SCL1;
+    SSP1DATPPS = 0x04;   //RA4->MSSP1:SDA1; 
+    RA4PPS = 0x14;   //RA4->MSSP1:SDA1; 
 }

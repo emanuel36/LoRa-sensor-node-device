@@ -76,7 +76,7 @@ void explicitHeaderMode();
 void implicitHeaderMode();
 unsigned writeByte(uint8_t byte);
 unsigned write(const uint8_t *buffer, unsigned size);
-void SX1276sendString(char *string);
+void SX1276WriteString(char *string);
 int endPacket(bool async);
 
 #endif	/* SX1276_H */

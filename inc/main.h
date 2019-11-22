@@ -3,9 +3,8 @@
 
 #include <stdbool.h>
 
-bool systemStatus;
 enum system_status {NORMAL = 0, WARNING} status;
-
+bool systemStatus = NORMAL;
 
 void setSystemStatus(bool state);
 bool getSystemStatus();

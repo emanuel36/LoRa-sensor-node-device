@@ -1,5 +1,4 @@
-#include <pic16f18426.h>
-
+#include <xc.h>
 #include "oneWire.h"
 #include "mcu.h"
 

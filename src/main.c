@@ -4,7 +4,6 @@
 #include <stdint.h>
 #include "main.h"
 #include "mcu.h"
-#include "eusart.h"
 #include "supplyVoltage.h"
 #include "sht30.h"
 #include "max44009.h"
@@ -12,7 +11,7 @@
 #include "soilMoistureSensor.h"
 #include "sx1276.h"
 
-char msg[60]; 
+char msg[35]; 
 float soilMoistureLevel;
 float supplyVoltage, 
       soilTemperature, 
@@ -83,9 +82,9 @@ void sensorsRead(){
 void msgBuild(){
     msg[0] = '\0';
     if(getSystemStatus() == NORMAL){
-       sprintf(msg, "Status: Normal\n%.3f V\n%.2fC/%.2f%%\n%.2fC\n%.2flm\n%.3fL\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
+       sprintf(msg, "1|%.3f|%.2f|%.2f|%.2f|%.2f|%.3f\0", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
     }else{
-       sprintf(msg, "Status: Erro\n%.3f V\n%.2fC/%.2f%%\n%.2fC\n%.2flm\n%.3fL\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel); 
+       sprintf(msg, "0|%.3f|%.2f|%.2f|%.2f|%.2f|%.3f\0", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel); 
     }
 }
 
@@ -93,22 +92,28 @@ void bluetoothSend(){
     EUSART_SendString(msg);
 }
 
+void SX1276Transmit(){
+    while(beginPacket(false) == 0){
+        setSystemStatus(WARNING);
+        __delay_ms(250);
+    }
+    
+    beginPacket(false);
+    SX1276WriteString(msg);
+    endPacket(false);
+}
+
 void callBack(){
     sensorsRead();
     systemCheck();
     msgBuild();
-    bluetoothSend();
+    SX1276Transmit();
 }
 
 void main(void){
     SYSTEM_Initialize();
-    while(1){ 
-        while(beginPacket(false) == 0){
-            setSystemStatus(WARNING);
-            __delay_ms(250);
-        }
-        beginPacket(false);
-        SX1276sendString("UFC - CAMPUS QUIXADA");
-        endPacket(false);
+    while(1){
+      callBack();
+      __delay_ms(500);  
     }
 }

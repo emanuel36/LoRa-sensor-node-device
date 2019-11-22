@@ -185,7 +185,7 @@ void implicitHeaderMode(){
   writeRegister(REG_MODEM_CONFIG_1, readRegister(REG_MODEM_CONFIG_1) | 0x01);
 }
 
-void SX1276sendString(char *string){
+void SX1276WriteString(char *string){
     while(*string != '\0'){
         writeByte(*string);
         string++;

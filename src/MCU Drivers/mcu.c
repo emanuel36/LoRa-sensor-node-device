@@ -5,7 +5,6 @@
 #include "adc.h"
 #include "i2c.h"
 #include "timer.h"
-#include "eusart.h"
 #include "oneWire.h"
 #include "interrupt.h"
 #include "supplyVoltage.h"
@@ -21,24 +20,25 @@ void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     SLEEP_Inicialize();
     PIN_MANAGER_Initialize();
-//    statusLed_Inicialize();
-//    setSystemStatus(NORMAL);
-//    ADC_Initialize();
-//    oneWirePinInicialize();
-//    supplyPinInicialize();
-//    I2C_Initialize();
-    SPI2_Initialize();
-//    max44009Setup();
-//    SHT30Setup();
-//    ds18b20Setup();
-    while(!begin(915000000)){
-        __delay_ms(500);
-        setSystemStatus(WARNING);
-    }
     TMR0_Initialize(T5_MINUTES);
     TMR2_Initialize();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
+    statusLed_Inicialize();
+    ADC_Initialize();
+    I2C_Initialize();
+    SPI2_Initialize();
+    oneWirePinInicialize();
+    supplyPinInicialize();
+    soilMoistureSensorPinInicialize();
+    max44009Setup();
+    SHT30Setup();
+    ds18b20Setup();
+    while(!begin(915000000)){
+        __delay_ms(500);
+        setSystemStatus(WARNING);
+    }
+    setSystemStatus(NORMAL);
 }
 
 void SLEEP_Inicialize(){

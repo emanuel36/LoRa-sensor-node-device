@@ -7,7 +7,6 @@
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
  
- 
  <p align="center">
     <br />
     <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device//tree/master/documentation"><strong>:page_facing_up: Explore the documentation :page_facing_up:</strong></a>
@@ -91,11 +90,11 @@ It is also capable of detecting sensors reading errors and dandgerous situations
 
 ### Schematic
 
-<img src="documentation/Hardware/esquematico.pdf">
+<img src="documentation/Hardware/esquematico.png">
 
 ### Board
 
-<img src="documentation/Hardware/desenho.pdf">
+<img src="documentation/Hardware/desenho.png">
 
 ## Assembled Board With Components
 

@@ -7,4 +7,4 @@
 void getSupplyVoltage(float *voltage);
 void supplyPinInicialize();
 
-#endif	SUPPLY_VOLTAGE
+#endif	/*SUPPLY_VOLTAGE_H*/

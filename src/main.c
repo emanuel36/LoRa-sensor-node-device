@@ -88,10 +88,6 @@ void msgBuild(){
     }
 }
 
-void bluetoothSend(){
-    EUSART_SendString(msg);
-}
-
 void SX1276Transmit(){
     while(beginPacket(false) == 0){
         setSystemStatus(WARNING);
@@ -113,7 +109,6 @@ void callBack(){
 void main(void){
     SYSTEM_Initialize();
     while(1){
-      callBack();
-      __delay_ms(500);  
+      SLEEP();
     }
 }

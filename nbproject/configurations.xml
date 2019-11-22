@@ -21,6 +21,7 @@
         <itemPath>inc/Peripheral Drivers/statusLed.h</itemPath>
         <itemPath>inc/Peripheral Drivers/soilMoistureSensor.h</itemPath>
         <itemPath>inc/Peripheral Drivers/supplyVoltage.h</itemPath>
+        <itemPath>inc/Peripheral Drivers/sx1276.h</itemPath>
       </logicalFolder>
       <itemPath>inc/main.h</itemPath>
     </logicalFolder>
@@ -48,6 +49,7 @@
         <itemPath>src/Peripheral Drivers/statusLed.c</itemPath>
         <itemPath>src/Peripheral Drivers/soilMoistureSensor.c</itemPath>
         <itemPath>src/Peripheral Drivers/supplyVoltage.c</itemPath>
+        <itemPath>src/Peripheral Drivers/sx1276.c</itemPath>
       </logicalFolder>
       <itemPath>src/main.c</itemPath>
     </logicalFolder>

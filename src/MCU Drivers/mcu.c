@@ -15,22 +15,26 @@
 #include "statusLed.h"
 #include "soilMoistureSensor.h"
 #include "spi.h"
+#include "sx1276.h"
 
 void SYSTEM_Initialize(){
     OSCILLATOR_Initialize();
     SLEEP_Inicialize();
     PIN_MANAGER_Initialize();
-    statusLed_Inicialize();
-    setSystemStatus(NORMAL);
-    ADC_Initialize();
-    EUSART_Initialize();
-    oneWirePinInicialize();
-    supplyPinInicialize();
-    I2C_Initialize();
-    max44009Setup();
-    SHT30Setup();
-    ds18b20Setup();
-//    SPI2_Initialize();
+//    statusLed_Inicialize();
+//    setSystemStatus(NORMAL);
+//    ADC_Initialize();
+//    oneWirePinInicialize();
+//    supplyPinInicialize();
+//    I2C_Initialize();
+    SPI2_Initialize();
+//    max44009Setup();
+//    SHT30Setup();
+//    ds18b20Setup();
+    while(!begin(915000000)){
+        __delay_ms(500);
+        setSystemStatus(WARNING);
+    }
     TMR0_Initialize(T5_MINUTES);
     TMR2_Initialize();
     INTERRUPT_GlobalInterruptEnable();
@@ -102,7 +106,10 @@ void PIN_MANAGER_Initialize(void)
     
     ANSA0 = 0;
     ANSA1 = 0;
-    RC3PPS = 0x0F;   //RC3->EUSART1:TX1;     
+    //RC3PPS = 0x0F;   //RC3->EUSART1:TX1; 
+    SSP2DATPPS = 0x03;   //RA3->MSSP2:SDI2;    
+    RC4PPS = 0x15;   //RC4->MSSP2:SCK2;    
+    RC5PPS = 0x16;   //RC5->MSSP2:SDO2;      
     RA1PPS = 0x13;   //RA1->MSSP1:SCL1;    
     RA0PPS = 0x14;   //RA0->MSSP1:SDA1;    
     SSP1DATPPS = 0x00;   //RA0->MSSP1:SDA1;   

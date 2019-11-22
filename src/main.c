@@ -10,6 +10,7 @@
 #include "max44009.h"
 #include "ds18b20.h"
 #include "soilMoistureSensor.h"
+#include "sx1276.h"
 
 char msg[60]; 
 float soilMoistureLevel;
@@ -94,7 +95,7 @@ void bluetoothSend(){
 
 void callBack(){
     sensorsRead();
-    //systemCheck();
+    systemCheck();
     msgBuild();
     bluetoothSend();
 }
@@ -102,7 +103,12 @@ void callBack(){
 void main(void){
     SYSTEM_Initialize();
     while(1){ 
-        callBack();
-        __delay_ms(500);
+        while(beginPacket(false) == 0){
+            setSystemStatus(WARNING);
+            __delay_ms(250);
+        }
+        beginPacket(false);
+        SX1276sendString("UFC - CAMPUS QUIXADA");
+        endPacket(false);
     }
 }

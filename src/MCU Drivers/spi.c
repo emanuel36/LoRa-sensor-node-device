@@ -8,16 +8,15 @@
 void SPI2_Initialize(void)
 {
     // Set the SPI2 module to the options selected in the User Interface
-    ANSA0 = 0;
-    ANSA1 = 0;
-    ANSA2 = 0;
+    ANSC5 = 0;
+    ANSC4 = 0;
     
-    TRISA0 = 1;
-    TRISA1 = 0;
-    TRISA2 = 0;
-    TRISC0 = 0;
+    TRISA3 = 1;
+    TRISC5 = 0;
+    TRISC4 = 0;
+    TRISC3 = 0;
     
-    LATC0 = 1;
+    LATC3 = 1;
     
     SSP2STAT = 0x40;
     SSP2CON1 = 0x21;
@@ -96,9 +95,9 @@ void SPI2_ClearWriteCollisionStatus(void)
 */
 
 void chipEnable(){
-    LATC0 = 0;
+    LATC3 = 0;
 }
 
 void chipDisable(){
-    LATC0 = 1;
+    LATC3 = 1;
 }

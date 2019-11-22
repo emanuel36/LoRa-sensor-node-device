@@ -9,7 +9,6 @@
  
  
  <p align="center">
-   :construction: Still in progress :construction:
     <br />
     <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device//tree/master/documentation"><strong>:page_facing_up: Explore the documentation :page_facing_up:</strong></a>
     <br />
@@ -38,7 +37,7 @@
 
 ## About The Project
 
-This is a project of a new LoRa device sensor-node. This device is capable of collecting environment data such as temperature, humidity, soil moisture and ambient as well as sending all data to a LoRaWAN gateway from miles away. The most impressive feature is the extremely low current draw of this device, because each component was analyzed and the low power consumption was one of the most analyzed aspects in the selection process. The electrical and power system is designed for decades of operation, with a combination of a large rechargeable battery and a solar-powered recharge system. In addition to collecting data about the environment, the device can signal its current status through an LED. It is also capable of detecting sensors reading errors and the battery level. This device is designed to work automatically without any human intervention. As can be seen from the [component specifications](#components-specifications) table, this device is very inexpensive, therefore it is suitable equipment to apply to a wireless sensor network in an agricultural field.
+This is a project of a new LoRaWAN device sensor-node. This device is capable of collecting environment data such as temperature, humidity, soil moisture and ambient as well as sending all data to a LoRaWAN gateway from miles away. As can be seen from the [component specifications](#components-specifications) table, this device is very inexpensive, therefore it is suitable equipment to apply to a wireless sensor network in an agricultural field.
 
 ### Built With
 * [LoRaWAN](https://lora-alliance.org/)
@@ -46,12 +45,33 @@ This is a project of a new LoRa device sensor-node. This device is capable of co
 * [MPLAP X IDE](https://www.microchip.com/mplab/mplab-x-ide)
 
 ### IDE and Compiler Version
-* [MPLAB XC8 v1.42](https://www.microchip.com/development-tools/pic-and-dspic-downloads-archive)
-* [MPLAP X IDE v5.25](https://www.microchip.com/development-tools/pic-and-dspic-downloads-archive)
+* [MPLAB XC8 v2.10](https://www.microchip.com/development-tools/pic-and-dspic-downloads-archive)
+* [MPLAP X IDE v5.30](https://www.microchip.com/development-tools/pic-and-dspic-downloads-archive)
 
 
 ## Detailed Description
+This device is designed to work automatically without any human intervention. 
 
+### Microcontroller
+The PIC16F18426 is perfect for the project, it's a family of Microchip MCUs intended of to sensor node devices.
+
+### Sensors
+The device has 4 sensors to measure air temperature, ground temperature, air humidity, soil moisture and sunlight or light levels.
+
+### LoRaWAN Transmitter
+The cheap SX1276 transmitter works well at a frequency of 915 MHz, because I'm using it in Brazil.
+
+### Power Supply System
+The electrical and power system is designed for decades of operation, with a combination of a large rechargeable battery and a solar-powered recharge system. It is possible to use this device only with solar energy without battery, the battery is only for power supply when there is no sunlight, such as at night and on cloudy days.
+
+### Power-Saving Operation Mode
+Most of the time the device remains in power save state with all peripherals turned off. When it is necessary to perform some task the system is woken up by an interruption. The data send and transmit period can be set between 5 and 80 minutes, so the system is woken up by a timer interrupt, performs the tasks and returns to power save mode.
+
+### Status LED
+The device can signal its current status through a flashing blue LED when in normal operation and red when something is going wrong. 
+
+### Error detection
+It is also capable of detecting sensors reading errors and dandgerous situations, using algorithms for that.
 
 ### Components specifications
 
@@ -71,15 +91,17 @@ This is a project of a new LoRa device sensor-node. This device is capable of co
 
 ### Schematic
 
-<img src="documentation/Hardware/esquematico.png">
+<img src="documentation/Hardware/esquematico.pdf">
 
 ### Board
 
-<img src="documentation/Hardware/placa.png">
+<img src="documentation/Hardware/desenho.pdf">
 
 ## Assembled Board With Components
 
 ## Acknowledgements
+
+I would like to thank all the teachers I've had since elementary school, this project is the result of a combination of everything you taught me.
 
 ## Contact
 

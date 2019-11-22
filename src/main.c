@@ -12,7 +12,7 @@
 #include "soilMoistureSensor.h"
 
 char msg[60]; 
-int soilMoistureLevel;
+float soilMoistureLevel;
 float supplyVoltage, 
       soilTemperature, 
       airTemperature, 
@@ -82,9 +82,9 @@ void sensorsRead(){
 void msgBuild(){
     msg[0] = '\0';
     if(getSystemStatus() == NORMAL){
-       sprintf(msg, "Status: Normal\n%.3f V\n%.2fC/%.2f%%\n%.2fC\n%.2flm\n%dL\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
+       sprintf(msg, "Status: Normal\n%.3f V\n%.2fC/%.2f%%\n%.2fC\n%.2flm\n%.3fL\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
     }else{
-       sprintf(msg, "Status: Erro\n%.3f V\n%.2fC/%.2f%%\n%.2fC\n%.2flm\n%dL\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel); 
+       sprintf(msg, "Status: Erro\n%.3f V\n%.2fC/%.2f%%\n%.2fC\n%.2flm\n%.3fL\n\n", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel); 
     }
 }
 
@@ -94,7 +94,7 @@ void bluetoothSend(){
 
 void callBack(){
     sensorsRead();
-    systemCheck();
+    //systemCheck();
     msgBuild();
     bluetoothSend();
 }
@@ -102,6 +102,7 @@ void callBack(){
 void main(void){
     SYSTEM_Initialize();
     while(1){ 
-        SLEEP();
+        callBack();
+        __delay_ms(500);
     }
 }

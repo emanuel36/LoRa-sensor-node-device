@@ -4,7 +4,7 @@
 #include "mcu.h"
 
 void oneWirePinInicialize(){
-    ANSC5 = 0;
+    ANSA2 = 0;
 }
 
 void OneWireHigh(){

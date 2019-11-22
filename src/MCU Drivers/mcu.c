@@ -99,16 +99,12 @@ void PIN_MANAGER_Initialize(void)
     INLVLA = 0x3F;
     INLVLC = 0x3F;
     
-//	SSP2DATPPS = 0x00;   //RA0->MSSP2:SDI2;    
-//    RA1PPS = 0x16;   //RA1->MSSP2:SDO2;    
-//    RA2PPS = 0x15;   //RA2->MSSP2:SCK2;    
-//    SSP2CLKPPS = 0x02;   //RA2->MSSP2:SCK2; 
     
-    ANSA5 = 0;
-    ANSA4 = 0;
-    RC0PPS = 0x0F;   //RC0->EUSART1:TX1;   
-    SSP1CLKPPS = 0x05;   //RA5->MSSP1:SCL1; 
-    RA5PPS = 0x13;   //RA5->MSSP1:SCL1;
-    SSP1DATPPS = 0x04;   //RA4->MSSP1:SDA1; 
-    RA4PPS = 0x14;   //RA4->MSSP1:SDA1; 
+    ANSA0 = 0;
+    ANSA1 = 0;
+    RC3PPS = 0x0F;   //RC3->EUSART1:TX1;     
+    RA1PPS = 0x13;   //RA1->MSSP1:SCL1;    
+    RA0PPS = 0x14;   //RA0->MSSP1:SDA1;    
+    SSP1DATPPS = 0x00;   //RA0->MSSP1:SDA1;   
+    SSP1CLKPPS = 0x01;   //RA1->MSSP1:SCL1;
 }

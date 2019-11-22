@@ -6,9 +6,9 @@
 #include <xc.h>
 
 // This configuration is required to make a PIC be in open drain 
-#define BUSDIR LATCbits.LATC5 // Set direction: input or output
-#define BUSOUT TRISCbits.TRISC5 // Set output: high or low 
-#define BUSIN PORTCbits.RC5 // Read input 
+#define BUSDIR LATAbits.LATA2 // Set direction: input or output
+#define BUSOUT TRISAbits.TRISA2 // Set output: high or low 
+#define BUSIN PORTAbits.RA2 // Read input 
 
 void oneWirePinInicialize();
 unsigned int OneWireReset(void); // Sends a reset pulse to the sensor 

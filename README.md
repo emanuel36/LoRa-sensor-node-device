@@ -52,7 +52,7 @@ This is a project of a new LoRaWAN device sensor-node. This device is capable of
 This device is designed to work automatically without any human intervention. 
 
 ### Microcontroller
-The PIC16F18426 is perfect for the project, it's a family of Microchip MCUs intended of to sensor node devices.
+The PIC16F18426 is perfect for the project, it's a family of Microchip MCUs intended to sensor node devices.
 
 ### Sensors
 The device has 4 sensors to measure air temperature, ground temperature, air humidity, soil moisture and sunlight or light levels.
@@ -61,16 +61,13 @@ The device has 4 sensors to measure air temperature, ground temperature, air hum
 The cheap SX1276 transmitter works well at a frequency of 915 MHz, because I'm using it in Brazil.
 
 ### Power Supply System
-The electrical and power system is designed for decades of operation, with a combination of a large rechargeable battery and a solar-powered recharge system. It is possible to use this device only with solar energy without battery, the battery is only for power supply when there is no sunlight, such as at night and on cloudy days.
+The electrical and power system is designed for decades of operation, with a combination of a large rechargeable battery and a solar-powered recharge system. It is possible to use this device only with solar energy without battery, the battery is only for power supply when there is no sunlight, such as at night and cloudy days.
 
 ### Power-Saving Operation Mode
 Most of the time the device remains in power save state with all peripherals turned off. When it is necessary to perform some task the system is woken up by an interruption. The data send and transmit period can be set between 5 and 80 minutes, so the system is woken up by a timer interrupt, performs the tasks and returns to power save mode.
 
 ### Status LED
-The device can signal its current status through a flashing blue LED when in normal operation and red when something is going wrong. 
-
-### Error detection
-It is also capable of detecting sensors reading errors and dandgerous situations, using algorithms for that.
+The device can signal its current status through a flashing blue LED when it is operating normally and red when something is wrong such as low battery, sensor reading failure or incorrect sensor data such as 80ºC temperature.
 
 ### Components specifications
 
@@ -101,7 +98,7 @@ It is also capable of detecting sensors reading errors and dandgerous situations
 
 ## Acknowledgements
 
-I would like to thank all the teachers I've had since elementary school, this project is the result of a combination of everything you taught me.
+I would like to thank all the professors I've had since elementary school, this project is the result of a combination of everything you taught me.
 
 ## Contact
 

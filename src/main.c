@@ -11,10 +11,10 @@
 #include "soilMoistureSensor.h"
 #include "sx1276.h"
 
-char msg[35]; 
-float soilMoistureLevel;
+char packet[30]; 
 float supplyVoltage, 
       soilTemperature, 
+      soilMoistureLevel,
       airTemperature, 
       airHumidity, 
       lightness;
@@ -79,13 +79,9 @@ void sensorsRead(){
     soilMoistureSensorRead(&soilMoistureLevel);
 }
 
-void msgBuild(){
-    msg[0] = '\0';
-    if(getSystemStatus() == NORMAL){
-       sprintf(msg, "1|%.3f|%.2f|%.2f|%.2f|%.2f|%.3f\0", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel);
-    }else{
-       sprintf(msg, "0|%.3f|%.2f|%.2f|%.2f|%.2f|%.3f\0", supplyVoltage, airTemperature, airHumidity, soilTemperature, lightness, soilMoistureLevel); 
-    }
+void pktBuild(){
+    packet[0] = '\0';
+    sprintf(packet, "%d|%.3f|%.2f|%.2f|%.2f|%.1f|%.1f", getSystemStatus(), supplyVoltage, airTemperature, soilTemperature, airHumidity, soilMoistureLevel, lightness);
 }
 
 void SX1276Transmit(){
@@ -95,20 +91,21 @@ void SX1276Transmit(){
     }
     
     beginPacket(false);
-    SX1276WriteString(msg);
+    SX1276WriteString(packet);
     endPacket(false);
 }
 
 void callBack(){
     sensorsRead();
     systemCheck();
-    msgBuild();
+    pktBuild();
     SX1276Transmit();
 }
 
 void main(void){
     SYSTEM_Initialize();
     while(1){
-      SLEEP();
+        callBack();
+        __delay_ms(100);
     }
 }

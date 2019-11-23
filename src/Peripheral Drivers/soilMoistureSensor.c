@@ -19,12 +19,8 @@ void soilMoistureSensorRead(float *moisture){
     ADC_use_fvr(1);
     sensorVoltage = (supplyVoltage * adcResult) / 4096.0;
     
-    *moisture = sensorVoltage/supplyVoltage;
+    *moisture = (0.7 - (sensorVoltage/supplyVoltage)) * 100;   
     
-//    moistureLevel = (0.80 - (sensorVoltage/supplyVoltage)) * 100;   
-//    
-//    if(moistureLevel < 0)   moistureLevel = 0;
-//    if(moistureLevel > 40)  moistureLevel = 40;
-//    
-//    *moisture = moistureLevel;
+    if(*moisture < 0.0)   *moisture = 0;
+    if(*moisture > 30.0)  *moisture = 30;
 }

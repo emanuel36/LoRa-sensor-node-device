@@ -16,7 +16,7 @@ bool dataCheck();
 bool voltageCheck();
 bool systemCheck();
 void sensorsRead();
-void msgBuild();
+void pktBuild();
 void bluetoothSend();
 void callBack();
 

@@ -1,5 +1,4 @@
-#include <pic16f18426.h>
-
+#include <xc.h>
 #include "main.h"
 #include "mcu.h"
 #include "adc.h"

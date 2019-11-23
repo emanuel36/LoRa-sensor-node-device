@@ -105,7 +105,6 @@ void callBack(){
 void main(void){
     SYSTEM_Initialize();
     while(1){
-        callBack();
-        __delay_ms(100);
+        SLEEP();
     }
 }

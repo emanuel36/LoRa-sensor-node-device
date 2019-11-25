@@ -23,6 +23,7 @@ void SYSTEM_Initialize(){
     TMR2_Initialize();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
+    setSystemStatus(WARNING);
     statusLed_Inicialize();
     ADC_Initialize();
     I2C_Initialize();
@@ -33,11 +34,7 @@ void SYSTEM_Initialize(){
     max44009Setup();
     SHT30Setup();
     ds18b20Setup();
-    while(!begin(915000000)){
-        __delay_ms(500);
-        setSystemStatus(WARNING);
-    }
-    setSystemStatus(NORMAL);
+    SX1216_Inicialize(915000000);
 }
 
 void SLEEP_Inicialize(){

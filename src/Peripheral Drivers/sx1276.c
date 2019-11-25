@@ -3,7 +3,7 @@
 #include "sx1276.h"
 #include "spi.h"
 
-int begin(long frequency){
+int SX1216_Inicialize(long frequency){
     RST_PIN = 0;
     RST = 0;
     __delay_ms(10);

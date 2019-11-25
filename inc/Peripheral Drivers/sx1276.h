@@ -61,7 +61,7 @@
 #define PA_OUTPUT_RFO_PIN          0
 #define PA_OUTPUT_PA_BOOST_PIN     1
 
-int begin(long frequency);
+int SX1216_Inicialize(long frequency);
 uint8_t readRegister(uint8_t address);
 void sleep();
 void setFrequency(long frequency);

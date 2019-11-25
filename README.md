@@ -104,6 +104,8 @@ The device can signal its current status through a flashing blue LED when it is 
 
 <img src="documentation/Photos/placa.jpg">
 
+<img src="documentation/Photos/placa_sensores.jpg">
+
 ## Acknowledgements
 
 I would like to thank all the professors I've had since elementary school, this project is the result of a combination of everything you taught me.

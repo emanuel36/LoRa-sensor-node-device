@@ -74,16 +74,22 @@ The device can signal its current status through a flashing blue LED when it is 
 | Component   | Description/Documentation   | Price (USD)   |
 |---------------------------------  |:-----------------------------------------------------------------------------------------------------------------------------------------:  |------------:  |
 | Microcontroller   | [PIC16F18426](https://www.microchip.com/wwwproducts/en/PIC16F18426)   | $1,02   |
-| LoRa Transmiter   | [SX1276](https://www.semtech.com/products/wireless-rf/lora-transceivers/sx1276)   | $4,15   |
+| LoRa Transmiter   | [SX1276](https://www.semtech.com/products/wireless-rf/lora-transceivers/sx1276) | $4,15   |
 | Solar Panel   | [Wavgat solar panel 1W/5V](https://pt.aliexpress.com/item/32844672794.html?isOrigTitle=true)  | $1,31   |
+| LED | [RGB LED](https://www.sparkfun.com/datasheets/Components/YSL-R596CR3G4B5C-C10.pdf)  | $0,10 |
 | Voltage regulator   | [LM2596](http://www.ti.com/product/LM2596)  | $0,30   |
+| Switch   | 2 x [DIP Switch 1 way](https://www.we-online.de/katalog/datasheet/418117270901.pdf)  | $0,16 |
+| PINS | [Header pin male](https://cdn.sparkfun.com/datasheets/Prototyping/16188.pdf)  | $0,20  |
+| MCU Socket | [14-PIN PDIP Socket](https://www.sparkfun.com/products/7939)  | $0,50   |
+| 10k Resistors  | [10k Resistors](https://www.circuitspecialists.com/rb10k.html) | $0,12 |
+| 4.7k Resistor  | [4.7k Resistors](https://www.circuitspecialists.com/ra4.7k.html) | $0,05 |
 | Battery   | [Panasonic NCR18650B](https://www.batteryspace.com/prod-specs/NCR18650B.pdf)  | $4,75   |
 | Battery Holder  | [BK-18650-PC2](http://www.memoryprotectiondevices.com/datasheets/BK-18650-PC2-datasheet.pdf)  | $0,49   |
 | Light Sensor  | [MAX44009](https://www.maximintegrated.com/en/products/interface/sensor-interface/MAX44009.html)  | $1,55   |
 | Air Temperature/Humidity Sensor   | [Sensirion SHT30](https://www.sensirion.com/en/environmental-sensors/humidity-sensors/digital-humidity-sensors-for-various-applications/)   | $1,90   |
 | Soil Moisture Sensor  | [Capacitive soil moisture sensor v1.2](https://media.digikey.com/pdf/Data%20Sheets/DFRobot%20PDFs/SEN0193_Web.pdf)  | $0,76   |
 | Soil Temperature  | [DS18B20](https://www.maximintegrated.com/en/products/DS18B20)  | $1,00   |
-|**Total** |-| **$17,23**|
+|**Total** |-| **$18,36**|
 
 
 ### Schematic

@@ -96,6 +96,10 @@ The device can signal its current status through a flashing blue LED when it is 
 
 ## Assembled Board With Components
 
+<img src="documentation/Photos/placa_1.png">
+
+<img src="documentation/Photos/placa_2.png">
+
 ## Acknowledgements
 
 I would like to thank all the professors I've had since elementary school, this project is the result of a combination of everything you taught me.

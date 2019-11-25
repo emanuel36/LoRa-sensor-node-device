@@ -78,7 +78,7 @@ The device can signal its current status through a flashing blue LED when it is 
 | Solar Panel   | [Wavgat solar panel 1W/5V](https://pt.aliexpress.com/item/32844672794.html?isOrigTitle=true)  | $1,31   |
 | LED | [RGB LED](https://www.sparkfun.com/datasheets/Components/YSL-R596CR3G4B5C-C10.pdf)  | $0,10 |
 | Voltage regulator   | [LM2596](http://www.ti.com/product/LM2596)  | $0,30   |
-| Switch   | 2 x [DIP Switch 1 way](https://www.we-online.de/katalog/datasheet/418117270901.pdf)  | $0,16 |
+| Switch   | [DIP Switch 1 way](https://www.we-online.de/katalog/datasheet/418117270901.pdf)  | $0,16 |
 | PINS | [Header pin male](https://cdn.sparkfun.com/datasheets/Prototyping/16188.pdf)  | $0,20  |
 | MCU Socket | [14-PIN PDIP Socket](https://www.sparkfun.com/products/7939)  | $0,50   |
 | 10k Resistors  | [10k Resistors](https://www.circuitspecialists.com/rb10k.html) | $0,12 |

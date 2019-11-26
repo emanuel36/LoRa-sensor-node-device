@@ -3,8 +3,8 @@
 [![Version][release-shield]][release-url]
 [![Stargazers][stars-shield]][stars-url]
 ![language-shield]
+![Size][size-shield]
 [![commits-shield][commits-shield]][commits-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
  
  <p align="center">
     <br />

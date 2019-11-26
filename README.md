@@ -1,5 +1,6 @@
   <h3 align="center">A low cost and low power LoRa device sensor-node</h3>
 
+[![Contributors][contributors-shield]][contributors-url]
 [![Version][release-shield]][release-url]
 [![Stargazers][stars-shield]][stars-url]
 ![language-shield]

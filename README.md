@@ -126,7 +126,7 @@ Project Link: [https://github.com/emanuel36/LoRaWAN-sensor-node-device](https://
 [stars-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/stargazers
 [language-shield]: https://img.shields.io/github/languages/top/emanuel36/LoRaWAN-sensor-node-device?color=191970&style=for-the-badge
 [language-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/search?l=c
-[size-shield]: https://img.shields.io/github/languages/code-size/emanuel36/LoRaWAN-sensor-node-device?color=008080&style=for-the-badge
+[size-shield]: https://img.shields.io/github/languages/code-size/emanuel36/LoRaWAN-sensor-node-device?color=008080&label=SIZE&style=for-the-badge
 [issues-shield]: https://img.shields.io/github/issues/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
 [issues-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge

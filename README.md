@@ -118,18 +118,18 @@ Emanuel Angelim - [Linkedin](https://www.linkedin.com/in/emanuel36/en) - emanuel
 
 Project Link: [https://github.com/emanuel36/LoRaWAN-sensor-node-device](https://github.com/emanuel36/LoRaWAN-sensor-node-device)
 
-[contributors-shield]: https://img.shields.io/github/contributors/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
-[commits-shield]:https://img.shields.io/github/last-commit/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
+[commits-shield]:https://img.shields.io/github/last-commit/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
 [commits-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/commits/master
-[release-shield]:https://img.shields.io/github/v/release/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
+[release-shield]:https://img.shields.io/github/v/release/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
 [release-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/releases
 [contributors-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
 [stars-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/stargazers
-[language-shield]: https://img.shields.io/github/languages/top/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
+[language-shield]: https://img.shields.io/github/languages/top/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
 [language-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/search?l=c
-[size-shield]: https://img.shields.io/github/languages/code-size/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
-[issues-shield]: https://img.shields.io/github/issues/emanuel36/LoRaWAN-sensor-node-device?style=flat-square
+[size-shield]: https://img.shields.io/github/languages/code-size/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
 [issues-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/issues
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue?style=flat-square
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge
 [linkedin-url]: https://www.linkedin.com/in/emanuel36/en

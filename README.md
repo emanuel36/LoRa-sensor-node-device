@@ -1,11 +1,11 @@
   <h3 align="center">A low cost and low power LoRa device sensor-node</h3>
 
-[![Contributors][contributors-shield]][contributors-url]
 [![Version][release-shield]][release-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![commits-shield][commits-shield]][commits-url]
 [![Stargazers][stars-shield]][stars-url]
 ![language-shield]
 ![Size][size-shield]
-[![commits-shield][commits-shield]][commits-url]
  
  <p align="center">
     <br />
@@ -122,11 +122,11 @@ Project Link: [https://github.com/emanuel36/LoRaWAN-sensor-node-device](https://
 [release-shield]:https://img.shields.io/github/v/release/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
 [release-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/releases
 [contributors-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/emanuel36/LoRaWAN-sensor-node-device?color=ffff00&style=for-the-badge
 [stars-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/stargazers
-[language-shield]: https://img.shields.io/github/languages/top/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
+[language-shield]: https://img.shields.io/github/languages/top/emanuel36/LoRaWAN-sensor-node-device?color=191970&style=for-the-badge
 [language-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/search?l=c
-[size-shield]: https://img.shields.io/github/languages/code-size/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
+[size-shield]: https://img.shields.io/github/languages/code-size/emanuel36/LoRaWAN-sensor-node-device?color=008080&style=for-the-badge
 [issues-shield]: https://img.shields.io/github/issues/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
 [issues-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge

@@ -104,7 +104,7 @@ The device can signal its current status through a flashing blue LED when it is 
 
 <img src="documentation/Photos/placa.jpg">
 
-<img src="documentation/Photos/placa_sensores.jpg">
+<img src="documentation/Photos/gramado.jpg">
 
 ## Acknowledgements
 

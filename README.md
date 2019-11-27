@@ -112,6 +112,8 @@ The device can signal its current status through a flashing blue LED when it is 
 
 I would like to thank all the professors I've had since elementary school, this project is the result of a combination of everything you taught me.
 
+The SX1276 LoRaWAN transmitter driver was adapted from https://github.com/sandeepmistry/arduino-LoRa.
+
 ## Contact
 
 Emanuel Angelim - [Linkedin](https://www.linkedin.com/in/emanuel36/en) - emanuel.tiec@gmail.com

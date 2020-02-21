@@ -1,7 +1,6 @@
   <h3 align="center">A low cost and low power LoRa device sensor-node</h3>
 
 [![Version][release-shield]][release-url]
-[![Contributors][contributors-shield]][contributors-url]
 [![commits-shield][commits-shield]][commits-url]
 [![Stargazers][stars-shield]][stars-url]
 ![language-shield]
@@ -9,15 +8,15 @@
  
  <p align="center">
     <br />
-    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device//tree/master/documentation"><strong>:page_facing_up: Explore the documentation :page_facing_up:</strong></a>
+    <a href="https://github.com/emanuel36/LoRa-sensor-node-device//tree/master/documentation"><strong>:page_facing_up: Explore the documentation :page_facing_up:</strong></a>
     <br />
-    <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device/issues">:warning: Report or Suggest Something :warning:</a>
+    <a href="https://github.com/emanuel36/LoRa-sensor-node-device/issues">:warning: Report or Suggest Something :warning:</a>
   </p>
 </p>
 
 <br />
 <p align="center">
-  <a href="https://github.com/emanuel36/LoRaWAN-sensor-node-device/">
+  <a href="https://github.com/emanuel36/LoRa-sensor-node-device/">
     <img src="documentation/Photos/system.png" alt="System Architecture" width="442" height="370">
     </a>
 
@@ -36,10 +35,10 @@
 
 ## About The Project
 
-This is a project of a new LoRaWAN device sensor-node. This device is capable of collecting environment data such as temperature, humidity, soil moisture and ambient as well as sending all data to a LoRaWAN gateway from miles away. As can be seen from the [component specifications](#components-specifications) table, this device is very inexpensive, therefore it is suitable equipment to apply to a wireless sensor network in an agricultural field.
+This is a project of a new LoRa device sensor-node. This device is capable of collecting environment data such as temperature, humidity, soil moisture and ambient as well as sending all data to a LoRa gateway from miles away. As can be seen from the [component specifications](#components-specifications) table, this device is very inexpensive, therefore it is suitable equipment to apply to a wireless sensor network in an agricultural field.
 
 ### Built With
-* [LoRaWAN](https://lora-alliance.org/)
+* [LoRa](https://lora-alliance.org/)
 * [PIC16F18426](https://www.microchip.com/wwwproducts/en/PIC16F18426)
 * [MPLAP X IDE](https://www.microchip.com/mplab/mplab-x-ide)
 
@@ -57,7 +56,7 @@ The PIC16F18426 is perfect for the project, it's a family of Microchip MCUs inte
 ### Sensors
 The device has 4 sensors to measure air temperature, ground temperature, air humidity, soil moisture and sunlight or light levels.
 
-### LoRaWAN Transmitter
+### LoRa Transmitter
 The cheap SX1276 transmitter works well at a frequency of 915 MHz, because I'm using it in Brazil.
 
 ### Power Supply System
@@ -117,26 +116,26 @@ The device can signal its current status through a flashing blue LED when it is 
 
 I would like to thank all the professors I've had since elementary school, this project is the result of a combination of everything you taught me.
 
-The SX1276 LoRaWAN transmitter driver was adapted from https://github.com/sandeepmistry/arduino-LoRa.
+The SX1276 LoRa transmitter driver was adapted from https://github.com/sandeepmistry/arduino-LoRa.
 
 ## Contact
 
 Emanuel Angelim - [Linkedin](https://www.linkedin.com/in/emanuel36/en) - emanuel.tiec@gmail.com
 
-Project Link: [https://github.com/emanuel36/LoRaWAN-sensor-node-device](https://github.com/emanuel36/LoRaWAN-sensor-node-device)
+Project Link: [https://github.com/emanuel36/LoRa-sensor-node-device](https://github.com/emanuel36/LoRa-sensor-node-device)
 
-[contributors-shield]: https://img.shields.io/github/contributors/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
-[commits-shield]:https://img.shields.io/github/last-commit/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
-[commits-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/commits/master
-[release-shield]:https://img.shields.io/github/v/release/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
-[release-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/releases
-[contributors-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/emanuel36/LoRaWAN-sensor-node-device?color=183c0d&style=for-the-badge
-[stars-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/stargazers
-[language-shield]: https://img.shields.io/github/languages/top/emanuel36/LoRaWAN-sensor-node-device?color=191970&style=for-the-badge
-[language-url]: https://github.com/emanuel36/LoRaWAN-sensor-node-device/search?l=c
-[size-shield]: https://img.shields.io/github/languages/code-size/emanuel36/LoRaWAN-sensor-node-device?color=008080&label=SIZE&style=for-the-badge
-[issues-shield]: https://img.shields.io/github/issues/emanuel36/LoRaWAN-sensor-node-device?style=for-the-badge
-[issues-url]:https://github.com/emanuel36/LoRaWAN-sensor-node-device/issues
+[contributors-shield]: https://img.shields.io/github/contributors/emanuel36/LoRa-sensor-node-device?style=for-the-badge
+[commits-shield]:https://img.shields.io/github/last-commit/emanuel36/LoRa-sensor-node-device?style=for-the-badge
+[commits-url]:https://github.com/emanuel36/LoRa-sensor-node-device/commits/master
+[release-shield]:https://img.shields.io/github/v/release/emanuel36/LoRa-sensor-node-device?style=for-the-badge
+[release-url]:https://github.com/emanuel36/LoRa-sensor-node-device/releases
+[contributors-url]: https://github.com/emanuel36/LoRa-sensor-node-device/graphs/contributors
+[stars-shield]: https://img.shields.io/github/stars/emanuel36/LoRa-sensor-node-device?color=183c0d&style=for-the-badge
+[stars-url]: https://github.com/emanuel36/LoRa-sensor-node-device/stargazers
+[language-shield]: https://img.shields.io/github/languages/top/emanuel36/LoRa-sensor-node-device?color=191970&style=for-the-badge
+[language-url]: https://github.com/emanuel36/LoRa-sensor-node-device/search?l=c
+[size-shield]: https://img.shields.io/github/languages/code-size/emanuel36/LoRa-sensor-node-device?color=008080&label=SIZE&style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/emanuel36/LoRa-sensor-node-device?style=for-the-badge
+[issues-url]:https://github.com/emanuel36/LoRa-sensor-node-device/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge
 [linkedin-url]: https://www.linkedin.com/in/emanuel36/en

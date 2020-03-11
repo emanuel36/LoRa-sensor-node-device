@@ -37,6 +37,8 @@
 
 This is a project of a new LoRa device sensor-node. This device is capable of collecting environment data such as temperature, humidity, soil moisture and ambient as well as sending all data to a LoRa gateway from miles away. As can be seen from the [component specifications](#components-specifications) table, this device is very inexpensive, therefore it is suitable equipment to apply to a wireless sensor network in an agricultural field.
 
+More details can be seen in this [publication](https://www.embarcados.com.br/dispositivo-sensor-no-lora-de-baixo-custo-utilizando-energia-solar/) (Portuguese language).
+
 ### Built With
 * [LoRa](https://lora-alliance.org/)
 * [PIC16F18426](https://www.microchip.com/wwwproducts/en/PIC16F18426)

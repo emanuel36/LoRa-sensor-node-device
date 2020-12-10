@@ -122,7 +122,7 @@ The SX1276 LoRa transmitter driver was adapted from https://github.com/sandeepmi
 
 ## Contact
 
-Emanuel Angelim - [Linkedin](https://www.linkedin.com/in/emanuel36/en) - emanuel.tiec@gmail.com
+Emanuel Angelim - [Linkedin](https://www.linkedin.com/in/emanuel36/en)
 
 Project Link: [https://github.com/emanuel36/LoRa-sensor-node-device](https://github.com/emanuel36/LoRa-sensor-node-device)
 

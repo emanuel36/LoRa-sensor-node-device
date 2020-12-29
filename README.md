@@ -120,12 +120,6 @@ I would like to thank all the professors I've had since elementary school, this 
 
 The SX1276 LoRa transmitter driver was adapted from https://github.com/sandeepmistry/arduino-LoRa.
 
-## Contact
-
-Emanuel Angelim - [Linkedin](https://www.linkedin.com/in/emanuel36/en)
-
-Project Link: [https://github.com/emanuel36/LoRa-sensor-node-device](https://github.com/emanuel36/LoRa-sensor-node-device)
-
 [contributors-shield]: https://img.shields.io/github/contributors/emanuel36/LoRa-sensor-node-device?style=for-the-badge
 [commits-shield]:https://img.shields.io/github/last-commit/emanuel36/LoRa-sensor-node-device?style=for-the-badge
 [commits-url]:https://github.com/emanuel36/LoRa-sensor-node-device/commits/master
